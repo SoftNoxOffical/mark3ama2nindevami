@@ -112,7 +112,7 @@ const Header = () => {
               onClick={() => setIsMenuOpen(false)}
               className="block mx-4 mt-4 px-4 py-2 bg-blue-900 text-white text-center rounded-lg font-semibold hover:bg-blue-800 transition-colors duration-200"
             >
-              {t('İletişim')}
+              {t('nav.quote')}
             </Link>
           </div>
         )}
