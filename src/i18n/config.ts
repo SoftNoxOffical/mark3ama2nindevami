@@ -12,6 +12,10 @@ const resources = {
         contact: 'İletişim',
         quote: 'Teklif Al'
       },
+      whatsapp: {
+        tooltip: "WhatsApp ile iletişime geçin",
+        message: "Merhaba! Size nasıl yardımcı olabilirim?"
+      },
       // Home page
       home: {
         heroTitle: 'Özel Üretim',
