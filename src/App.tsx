@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, HashRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -63,7 +63,7 @@ function App() {
   }, []);
 
   return (
-    <HashRouter>
+    
     <Router>
       <ScrollToTop behavior="smooth" />
       <div className="min-h-screen bg-white">
@@ -82,7 +82,7 @@ function App() {
         <WhatsAppButton />
       </div>
     </Router>
-    </HashRouter>
+   
   );
 }
 
