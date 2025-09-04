@@ -231,7 +231,9 @@ const resources = {
         description: 'Özel üretim bez ve tekstil ürünleri konusunda uzman firmamız, kaliteli hizmet anlayışı ile müşterilerine en iyi çözümleri sunar.',
         productsTitle: 'Ürünlerimiz',
         contactTitle: 'İletişim Bilgileri',
-        copyright: '© 2025 SoftNox. Tüm hakları saklıdır.'
+        copyright: '© 2025 SoftNox. Tüm hakları saklıdır.',
+        address1: 'Altınova Mah. Fuar Caddesi No:61 16090 Osmangazi / BURSA',
+        address2:"Anadolu Mah. Karlıdağ Caddesi No:44/C 16270 Yıldırım / BURSA",
       }
     }
   },
