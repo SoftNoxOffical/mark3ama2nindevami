@@ -120,7 +120,7 @@ const Home = () => {
                   </div>
                   <div className="p-4 sm:p-6">
                     <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">{t(product.nameKey)}</h3>
-                    <p className="text-sm sm:text-base text-gray-600 mb-4 line-clamp-3">{t(product.descriptionKey)}</p>
+                    <p className="text-sm sm:text-base text-gray-600 mb-4 line-clamp-3  whitespace-pre-line">{t(product.descriptionKey)}</p>
                   </div>
                 </div>
               ))}
@@ -156,7 +156,15 @@ const Home = () => {
                     </div>
                     <div className="p-5 xl:p-6">
                       <h3 className="text-xl xl:text-2xl font-semibold text-gray-900 mb-3">{t(product.nameKey)}</h3>
-                      <p className="text-sm xl:text-base text-gray-600 mb-4 line-clamp-3">{t(product.descriptionKey)}</p>
+                      <ul className="text-sm sm:text-base text-gray-600 mb-4 list-disc pl-5 space-y-1">
+                        {String(t(product.descriptionKey))
+                          .split(/\r?\n\s*/)   // satır sonlarına göre böl
+                          .filter(Boolean)     // boş satırları at
+                          // .slice(0, 6)       // (İsteğe bağlı) en fazla 6 madde göster
+                          .map((line, i) => (
+                            <li key={i}>{line}</li>
+                          ))}
+                      </ul>
                     </div>
                   </div>
                 ))}
@@ -211,14 +219,16 @@ const Home = () => {
                 </div>
                 <div className="lg:w-1/2 space-y-6">
                   <h3 className="text-3xl font-bold text-gray-900">{t(product.nameKey)}</h3>
-                  <p className="text-lg text-gray-700 leading-relaxed">
+                  <p className="text-lg text-gray-700 leading-relaxed whitespace-pre-line">
                     {t(product.descriptionKey)}
                   </p>
+                  {/* Features Box 
                   <div className={`${index % 4 === 0 ? 'bg-blue-50' : index % 4 === 1 ? 'bg-green-50' : index % 4 === 2 ? 'bg-purple-50' : 'bg-yellow-50'} p-4 rounded-lg`}>
                     <p className={`${index % 4 === 0 ? 'text-blue-800' : index % 4 === 1 ? 'text-green-800' : index % 4 === 2 ? 'text-purple-800' : 'text-yellow-800'} font-medium`}>
                       {t(`products.${product.nameKey.split('.')[1]}.features`)}
                     </p>
                   </div>
+                  */}
                 </div>
               </div>
             ))}
@@ -233,7 +243,7 @@ const Home = () => {
                 {t('home.specialNeedsDescription')}
               </p>
               <Link
-                to="/iletisim"
+                to="/teklifal"
                 className="inline-block bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
               >
                 {t('home.contactButton')}

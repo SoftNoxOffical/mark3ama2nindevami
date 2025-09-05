@@ -41,10 +41,9 @@ const Header = () => {
               className={`h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 object-contain shrink-0 transition-opacity duration-300 ${isScrolled ? 'opacity-90' : 'opacity-100'
                 }`}
             />
-            <span className={`font-bold transition-colors duration-300 text-lg sm:text-xl md:text-2xl ${isScrolled ? 'text-blue-900' : 'text-blue-900'
-              }`}>
-              VONZA
-            </span>
+            <span className="font-bold transition-colors duration-300 text-lg sm:text-xl md:text-2xl text-[#014e84]">
+  VONZA
+</span>
           </Link>
 
           {/* Desktop Navigation */}

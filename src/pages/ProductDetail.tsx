@@ -212,7 +212,7 @@ const ProductDetail = () => {
         </div>
       </section>
 
-      {/* Product Details */}
+      {/* Product Details 
       <section 
         ref={detailsRef}
         className={`py-20 bg-gray-50 transition-all duration-1000 delay-200 ${
@@ -221,7 +221,7 @@ const ProductDetail = () => {
       >
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Specifications */}
+            {/* Specifications 
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-8">Teknik Özellikler</h2>
               <div className="bg-white rounded-2xl shadow-lg p-8">
@@ -236,7 +236,7 @@ const ProductDetail = () => {
               </div>
             </div>
 
-            {/* Benefits */}
+            {/* Benefits 
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-8">Avantajlar</h2>
               <div className="space-y-6">
@@ -256,7 +256,7 @@ const ProductDetail = () => {
           </div>
         </div>
       </section>
-
+*/}
       {/* Related Products */}
       <section 
         ref={featuresRef}

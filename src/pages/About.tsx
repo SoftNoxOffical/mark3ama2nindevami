@@ -11,8 +11,8 @@ const About = () => {
 
   const stats = [
     { number: '10+', label: 'Yıl Deneyim' },
-    { number: '1000+', label: 'Mutlu Müşteri' },
-    { number: '50+', label: 'Ürün Çeşidi' },
+    { number: '10.000+', label: 'Günlük Üretim Kapasitesi' },
+    { number: '200+', label: 'Kurumsal Referans' },
     { number: '24/7', label: 'Destek Hizmeti' }
   ];
 
@@ -68,44 +68,42 @@ const About = () => {
       </section>
 */}
       {/* Story Section */}
-      <section 
+      <section
         ref={storyRef}
-        className={`py-20 bg-white transition-all duration-1000 delay-200 ${
-          storyVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'
-        }`}
+        className={`py-20 bg-white transition-all duration-1000 delay-200 ${storyVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'
+          }`}
       >
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-        <h2 id="hikaye-baslik" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
-          Hikayemiz
-        </h2>
-        <div className="h-1 w-16 bg-amber-500 rounded mb-6" />
+              <h2 id="hikaye-baslik" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
+                Hikayemiz
+              </h2>
+              <div className="h-1 w-16 bg-amber-500 rounded mb-6" />
 
-        <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-          Vonza Tekstil Otomotiv San. ve Tic. Ltd. Şti. olarak, <strong>10 yılı aşkın</strong> tecrübemizle
-          otomotiv yan sanayi sektöründe faaliyet gösteren boyahanelere yüksek kaliteli teknik tekstil ürünleri
-          tedarik etmekteyiz.
-        </p>
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                Vonza Tekstil Otomotiv San. ve Tic. Ltd. Şti. olarak, <strong>10 yılı aşkın</strong> tecrübemizle
+                otomotiv yan sanayi sektöründe faaliyet gösteren boyahanelere yüksek kaliteli teknik tekstil ürünleri
+                tedarik etmekteyiz.
+              </p>
 
-        <h3 className="text-xl font-semibold text-gray-800">Başlıca ürün gruplarımız</h3>
-        <ul className="mt-3 grid grid-cols-1 sm:grid-cols-2 
+              <h3 className="text-xl font-semibold text-gray-800">Başlıca ürün gruplarımız</h3>
+              <ul className="mt-3 grid grid-cols-1 sm:grid-cols-2 
         gap-x-4 gap-y-1 
         list-disc pl-6 
         text-base text-gray-700 
         leading-relaxed 
         marker:text-amber-500">
-          <li>İPA Silme Bezleri</li>
-          <li>Boya Süzme Bezleri (İpek Elek Süzme Bezleri)</li>
-          <li>Bandocu Eldivenleri</li>
-          <li>Mikrofiber Temizlik Bezleri</li>
-        </ul>
+                <li>İPA Silme Bezleri</li>
+                <li>Boya Süzme Bezleri (İpek Elek Süzme Bezleri)</li>
+                <li>Bandocu Eldivenleri</li>
+                <li>Mikrofiber Temizlik Bezleri</li>
+              </ul>
 
-        <p className="mt-4 text-lg text-gray-600 leading-relaxed">
-          Ürünlerimiz, kalite ve işlevsellik açısından kendini kanıtlamış; üretim süreçlerinizi kolaylaştıran
-          ve verimliliğinizi artıran çözümler sunar.
-        </p>
-      </div>
+              <p className="mt-4 text-lg text-gray-600 leading-relaxed">
+                Ürünlerimiz, kalite ve işlevsellik açısından sektörde kendini kanıtlamış; üretim süreçlerinizi kolaylaştırmayı, verimliliğinizi artırmayı hedefleyen çözümler sunmaktadır.
+              </p>
+            </div>
             <div className="relative">
               <img
                 src="https://images.pexels.com/photos/5708971/pexels-photo-5708971.jpeg"
@@ -113,7 +111,7 @@ const About = () => {
                 className="rounded-2xl shadow-2xl w-full"
               />
               <div className="absolute -bottom-6 -right-6 bg-yellow-500 text-black p-6 rounded-xl shadow-xl">
-                <p className="text-2xl font-bold">15+</p>
+                <p className="text-2xl font-bold">10+</p>
                 <p className="text-sm">Yıl Deneyim</p>
               </div>
             </div>
@@ -122,20 +120,18 @@ const About = () => {
       </section>
 
       {/* Stats Section */}
-      <section 
+      <section
         ref={statsRef}
-        className={`py-20 bg-blue-900 text-white transition-all duration-1000 delay-300 ${
-          statsVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'
-        }`}
+        className={`py-20 bg-blue-900 text-white transition-all duration-1000 delay-300 ${statsVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'
+          }`}
       >
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className={`text-center transform transition-all duration-700 ${
-                  statsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                }`}
+                className={`text-center transform transition-all duration-700 ${statsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                  }`}
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
                 <div className="text-4xl md:text-6xl font-bold text-yellow-500 mb-2">
@@ -149,11 +145,10 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section 
+      <section
         ref={valuesRef}
-        className={`py-20 bg-gray-50 transition-all duration-1000 delay-400 ${
-          valuesVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'
-        }`}
+        className={`py-20 bg-gray-50 transition-all duration-1000 delay-400 ${valuesVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'
+          }`}
       >
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
@@ -167,9 +162,8 @@ const About = () => {
             {values.map((value, index) => (
               <div
                 key={index}
-                className={`bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-all duration-300 transform hover:scale-105 ${
-                  valuesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                }`}
+                className={`bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-all duration-300 transform hover:scale-105 ${valuesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                  }`}
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
                 <div className="bg-blue-900 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -180,19 +174,19 @@ const About = () => {
               </div>
             ))}
           </div>
-        {/* Call to Action */}
+          {/* Call to Action */}
           <div className="text-center mt-16">
             <div className="bg-blue-900 text-white p-8 rounded-2xl">
               <h3 className="text-2xl font-bold mb-4">Özel Üretim Talebi</h3>
               <p className="text-xl mb-6 opacity-90">
                 İhtiyaçlarınıza özel bez üretimi yapıyoruz. Bizimle iletişime geçin!
               </p>
-              
-              <Link 
-            to="/iletisim"
-            className="bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-3 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105">
-            İletişime Geçin
-          </Link>
+
+              <Link
+                to="/iletisim"
+                className="bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-3 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+                İletişime Geçin
+              </Link>
             </div>
           </div>
         </div>

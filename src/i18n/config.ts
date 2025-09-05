@@ -31,7 +31,7 @@ const resources = {
         productTypesSubtitle: 'Farklı sektörlere yönelik kaliteli bez ürünleri üretiyoruz. Her ürünümüz özel ihtiyaçlara göre tasarlanmıştır.',
         specialNeedsTitle: 'Özel İhtiyaçlarınız İçin Çözüm Arıyorsunuz?',
         specialNeedsDescription: 'Hangi sektörde olursanız olun, size özel bez ürünleri üretebiliriz. Detaylı bilgi almak için bizimle iletişime geçin.',
-        contactButton: 'İletişime Geçin'
+        contactButton: 'Teklif Alın'
       },
       // Products
       products: {
@@ -47,7 +47,7 @@ const resources = {
         priceContact: 'Fiyat için iletişime geçin',
         ipaCloth: {
           name: 'İPA SİLME BEZİ',
-          description: '%100 polyester endüstriyel örme silme bezi. Ultrasonik kesim ile dilimleme yapılmaktadır, kesilen kenarlardan hav bırakma veya iplik atması yapmaz.',
+          description: '%100 polyester endüstriyel örme silme bezi. Ultrasonik kesim ile dilimleme yapılmaktadır, kesilen kenarlardan hav bırakma veya iplik atması yapmaz. \n20×40, 30×40, 40×40 veya diğer istenilen ebatlarda dilimlenebilir. \nTek taraflı desen, 200 gr/m2. \nYüzeyi çizmez, hav veya lif bırakmaz. \nÜstün hidrofilik özellik, yüksek sıvı emme kapasitesi. \nTüm yüzeyler için uygundur. \nOtomotiv ve boya sanayi hassas yüzey işlemleri için uygundur.',
           features: '✓ Steril üretim ✓ Antibakteriyel özellik ✓ Tek kullanımlık seçenekler'
         },
         silkMesh: {
@@ -62,7 +62,7 @@ const resources = {
         },
         bandocuGlove: {
           name: 'BANDOCU ELDİVENİ',
-          description: 'Tören yürüyüşleri, konserler ve resmi geçitler için tasarlanan bandocu eldivenimiz; optik beyaz rengi, düzgün dikiş yapısı ve konforlu kalıbıyla kıyafetinizi tamamlar.',
+          description: '%100 Polyester \n Hav ve iz bırakmayan minimum dikişle tasarlanmış eldivendir.',
           features: '✓ Leke direnci ✓ Sık yıkamaya dayanıklı ✓ Profesyonel görünüm'
         }
       },
