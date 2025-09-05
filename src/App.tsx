@@ -11,7 +11,6 @@ import ProductDetail from './pages/ProductDetail';
 import Contact from './pages/Contact';
 import Quote from './pages/Quote';
 import ScrollToTop from './ScrollToTop';
-
 import './i18n/config';
 
 // Google Translate Integration
