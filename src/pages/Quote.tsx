@@ -1,7 +1,7 @@
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { FileText, ExternalLink, CheckCircle } from 'lucide-react';
-import React, { useEffect, useState } from 'react';
 
 const Quote = () => {
   const { t } = useTranslation();
@@ -9,20 +9,7 @@ const Quote = () => {
   const [formRef, formVisible] = useScrollAnimation();
 
   const FORM_URL =
-    "https://docs.google.com/forms/d/e/1FAIpQLSeqycag4maubVF3TJmPlGuyBzYXPofVN0EMGE25Q50R2mvT6w/viewform?usp=header";
-
-  const [isTouch, setIsTouch] = useState(false);
-
-  const openForm = () => {
-    window.open(FORM_URL, "_blank", "noopener,noreferrer");
-  };
-  useEffect(() => {
-    const touch =
-      (window.matchMedia && window.matchMedia("(pointer: coarse)").matches) ||
-      "ontouchstart" in window ||
-      (navigator.maxTouchPoints ?? 0) > 0;
-    setIsTouch(touch);
-  }, []);
+    "https://docs.google.com/forms/d/e/1FAIpQLSeqycag4maubVF3TJmPlGuyBzYXPofVN0EMGE25Q50R2mvT6w/viewform?usp=sharing&ouid=108226957756009257988";
 
   const benefits = [
     'Ücretsiz teklif hazırlama',
@@ -93,30 +80,20 @@ const Quote = () => {
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
               <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 p-6 text-center">
                 <FileText className="h-8 w-8 text-black mx-auto mb-2" />
-                <h3 className="text-2xl font-bold text-black">{t('quote.formButton')}</h3>
+                <h3 className="text-2xl font-bold text-black">{t('telkifal.formButton')}</h3>
                 <p className="text-black/80 mt-2">Formu doldurun, size ulaşalım</p>
               </div>
-              <div className="p-6">
-                <div className="relative aspect-[4/5] w-full">
-                  {/* Üstte tamamen görünmez ama tıklanabilir katman */}
-                  <button
-                    type="button"
-                    onClick={openForm}
-                    onTouchStart={openForm}            // iOS için ekstra güvence
-                    aria-label="Formu yeni sekmede aç"
-                    className="absolute inset-0 z-20 bg-transparent cursor-pointer"
-                    style={{ WebkitTapHighlightColor: "transparent" }}
-                  />
 
+              <div className="p-6">
+                <div className="aspect-[4/5] w-full">
                   <iframe
-                    src={FORM_URL}
-                    width="100%"
+                    src={FORM_URL} width="100%"
                     height="100%"
                     frameBorder="0"
                     marginHeight={0}
                     marginWidth={0}
+                    className="rounded-lg"
                     title="Teklif Talep Formu"
-                    className="rounded-lg pointer-events-none z-0"  // alttaki içerik tıklanmasın
                   >
                     Yükleniyor...
                   </iframe>
@@ -134,8 +111,6 @@ const Quote = () => {
                   </a>
                 </div>
               </div>
-
-
             </div>
           </div>
         </div>
