@@ -7,6 +7,9 @@ const Contact = () => {
   const [formRef, formVisible] = useScrollAnimation();
   const [infoRef, infoVisible] = useScrollAnimation();
 
+  // sayfanın üstünde:
+  const GOOGLE_FORM_ACTION =
+    "https://docs.google.com/forms/d/e/1FAIpQLScdlbr8yP67NJ6UTeDQwQudYO47aVse2oTKFMadm-X20Ber9A/formResponse";
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -17,6 +20,67 @@ const Contact = () => {
     message: ''
   });
 
+// Doğru entry ID'ler
+const ENTRY = {
+  firstName: "entry.2005620554",   // Ad
+  lastName:  "entry.41818161",     // Soyad
+  company:   "entry.1751242971",   // Şirket Adı
+  email:     "entry.1045781291",   // E-posta
+  address:   "entry.1065046570",   // Adres (tek alan)
+  phone:     "entry.1166974658",   // Telefon numarası
+  message:   "entry.839337160",    // Notlar
+};
+
+
+  function submitToGoogleForm(data: typeof formData) {
+    const form = document.createElement("form");
+    form.action = GOOGLE_FORM_ACTION;
+    form.method = "POST";
+    form.target = "_blank"; // yeni sekmede aç (istersen "hidden_iframe" kullanabilirsin)
+
+    const add = (name: string, value: string) => {
+      const input = document.createElement("input");
+      input.type = "hidden";
+      input.name = name;
+      input.value = value ?? "";
+      form.appendChild(input);
+    };
+
+const [first, ...rest] = (data.name || "").trim().split(/\s+/);
+  const last = rest.join(" ");
+
+  // Ad, Soyad
+  add(ENTRY.firstName, first || "-");
+  add(ENTRY.lastName, last || "-");
+
+  // Şirket
+  add(ENTRY.company, data.company || "-");
+
+  // E-posta
+  add(ENTRY.email, data.email);
+
+  // Adres: location + country birleşik
+  const address = [data.location, data.country].filter(Boolean).join(", ");
+  add(ENTRY.address, address || "-");
+
+  // Telefon
+  add(ENTRY.phone, data.phone);
+
+  // Notlar (bizde "message")
+  add(ENTRY.message, data.message || "-");
+
+  document.body.appendChild(form);
+  form.submit();
+  document.body.removeChild(form);
+}
+const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  submitToGoogleForm(formData);
+  alert("Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.");
+ 
+  }
+
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -25,12 +89,12 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  {/*const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
     // Form submission logic here
     alert('Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.');
-  };
+  };*/}
 
   const contactInfo = [
     {
@@ -62,11 +126,10 @@ const Contact = () => {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section 
+      <section
         ref={heroRef}
-        className={`relative h-96 flex items-center justify-center overflow-hidden transition-all duration-1000 ${
-          heroVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'
-        }`}
+        className={`relative h-96 flex items-center justify-center overflow-hidden transition-all duration-1000 ${heroVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'
+          }`}
       >
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-black/60 z-10"></div>
@@ -76,7 +139,7 @@ const Contact = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        
+
         <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-4">
           <h1 className="text-5xl md:text-6xl font-bold mb-4">
             İletişim
@@ -88,11 +151,10 @@ const Contact = () => {
       </section>
 
       {/* Contact Info Section */}
-      <section 
+      <section
         ref={infoRef}
-        className={`py-20 bg-white transition-all duration-1000 delay-200 ${
-          infoVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'
-        }`}
+        className={`py-20 bg-white transition-all duration-1000 delay-200 ${infoVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'
+          }`}
       >
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
@@ -106,9 +168,8 @@ const Contact = () => {
             {contactInfo.map((info, index) => (
               <div
                 key={index}
-                className={`bg-gray-50 p-6 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105 ${
-                  infoVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                }`}
+                className={`bg-gray-50 p-6 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105 ${infoVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                  }`}
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
                 <div className={`${info.color} w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center mx-auto mb-4`}>
@@ -134,11 +195,10 @@ const Contact = () => {
       </section>
 
       {/* Contact Form Section */}
-      <section 
+      <section
         ref={formRef}
-        className={`py-20 bg-gray-50 transition-all duration-1000 delay-400 ${
-          formVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'
-        }`}
+        className={`py-20 bg-gray-50 transition-all duration-1000 delay-400 ${formVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'
+          }`}
       >
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto">
