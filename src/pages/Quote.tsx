@@ -12,6 +12,10 @@ const Quote = () => {
     "https://docs.google.com/forms/d/e/1FAIpQLScdlbr8yP67NJ6UTeDQwQudYO47aVse2oTKFMadm-X20Ber9A/viewform?usp=sharing&ouid=108226957756009257988";
 
   const [isTouch, setIsTouch] = useState(false);
+
+  const openForm = () => {
+    window.open(FORM_URL, "_blank", "noopener,noreferrer");
+  };
   useEffect(() => {
     const touch =
       (window.matchMedia && window.matchMedia("(pointer: coarse)").matches) ||
@@ -94,16 +98,15 @@ const Quote = () => {
               </div>
               <div className="p-6">
                 <div className="relative aspect-[4/5] w-full">
-                  {/* Mobilde tıklayınca yeni sekmede açan görünmez katman */}
-                  {isTouch && (
-                    <a
-                      href={FORM_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Formu yeni sekmede aç"
-                      className="absolute inset-0 z-10"
-                    />
-                  )}
+                  {/* Üstte tamamen görünmez ama tıklanabilir katman */}
+                  <button
+                    type="button"
+                    onClick={openForm}
+                    onTouchStart={openForm}            // iOS için ekstra güvence
+                    aria-label="Formu yeni sekmede aç"
+                    className="absolute inset-0 z-20 bg-transparent cursor-pointer"
+                    style={{ WebkitTapHighlightColor: "transparent" }}
+                  />
 
                   <iframe
                     src={FORM_URL}
@@ -113,7 +116,7 @@ const Quote = () => {
                     marginHeight={0}
                     marginWidth={0}
                     title="Teklif Talep Formu"
-                    className={`rounded-lg ${isTouch ? "pointer-events-none" : ""}`}
+                    className="rounded-lg pointer-events-none z-0"  // alttaki içerik tıklanmasın
                   >
                     Yükleniyor...
                   </iframe>
@@ -131,6 +134,7 @@ const Quote = () => {
                   </a>
                 </div>
               </div>
+
 
             </div>
           </div>
