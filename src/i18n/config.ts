@@ -187,13 +187,13 @@ const resources = {
         title: 'Teklif Talep Formu',
         subtitle: 'Özel ihtiyaçlarınız için teklif almak üzere formu doldurun',
         formButton: 'Teklif Formu',
-        description: 'Aşağıdaki formu doldurarak özel bez ürünleri için teklif alabilirsiniz.',
+        description: 'Yan taraftaki formu doldurarak özel bez ürünleri için teklif alabilirsiniz.',
         benefitsTitle: 'Teklif Alma Avantajları',
         benefits: [
           'Ücretsiz teklif hazırlama',
           '24 saat içinde geri dönüş',
           'Özel tasarım seçenekleri',
-          'Toplu sipariş indirimleri',
+          'Toplu sipariş',
           'Kalite garantisi',
           'Hızlı teslimat'
         ],

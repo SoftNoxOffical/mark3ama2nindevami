@@ -15,7 +15,7 @@ const Quote = () => {
     'Ücretsiz teklif hazırlama',
     '24 saat içinde geri dönüş',
     'Özel tasarım seçenekleri',
-    'Toplu sipariş indirimleri',
+    'Toplu sipariş',
     'Kalite garantisi',
     'Hızlı teslimat'
   ];
@@ -29,9 +29,9 @@ const Quote = () => {
           }`}
       >
         <div className="container mx-auto px-4 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold mb-6">{t('telkifal.title')}</h1>
+          <h1 className="text-5xl font-bold mb-6">{t('quote.title')}</h1>
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
-            {t('telkifal.subtitle')}
+            {t('quote.subtitle')}
           </p>
         </div>
       </section>
@@ -49,7 +49,7 @@ const Quote = () => {
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Teklif Alma Avantajları</h2>
                 <p className="text-lg text-gray-700 mb-8">
-                  {t('telkifal.description')}
+                  {t('quote.description')}
                 </p>
               </div>
 
@@ -64,7 +64,7 @@ const Quote = () => {
                   </div>
                 ))}
               </div>
-
+{/*
               <div className="bg-gradient-to-r from-blue-900 to-gray-800 p-6 rounded-2xl text-white">
                 <h3 className="text-xl font-semibold mb-2">Hızlı İletişim</h3>
                 <p className="opacity-90 mb-4">
@@ -74,13 +74,14 @@ const Quote = () => {
                   <span className="text-yellow-400 font-semibold">📞 +90 XXX XXX XX XX</span>
                 </div>
               </div>
+               */}
             </div>
 
             {/* Embedded Google Form */}
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
               <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 p-6 text-center">
                 <FileText className="h-8 w-8 text-black mx-auto mb-2" />
-                <h3 className="text-2xl font-bold text-black">{t('telkifal.formButton')}</h3>
+                <h3 className="text-2xl font-bold text-black">{t('quote.formButton')}</h3>
                 <p className="text-black/80 mt-2">Formu doldurun, size ulaşalım</p>
               </div>
 
