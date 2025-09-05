@@ -156,15 +156,7 @@ const Home = () => {
                     </div>
                     <div className="p-5 xl:p-6">
                       <h3 className="text-xl xl:text-2xl font-semibold text-gray-900 mb-3">{t(product.nameKey)}</h3>
-                      <ul className="text-sm sm:text-base text-gray-600 mb-4 list-disc pl-5 space-y-1">
-                        {String(t(product.descriptionKey))
-                          .split(/\r?\n\s*/)   // satır sonlarına göre böl
-                          .filter(Boolean)     // boş satırları at
-                          // .slice(0, 6)       // (İsteğe bağlı) en fazla 6 madde göster
-                          .map((line, i) => (
-                            <li key={i}>{line}</li>
-                          ))}
-                      </ul>
+                      <p className="text-sm xl:text-base text-gray-600 mb-4 line-clamp-3  whitespace-pre-line">{t(product.descriptionKey)}</p>
                     </div>
                   </div>
                 ))}
@@ -219,7 +211,7 @@ const Home = () => {
                 </div>
                 <div className="lg:w-1/2 space-y-6">
                   <h3 className="text-3xl font-bold text-gray-900">{t(product.nameKey)}</h3>
-                  <p className="text-lg text-gray-700 leading-relaxed whitespace-pre-line">
+                  <p className="text-lg text-gray-700 leading-relaxed whitespace-pre-line whitespace-pre-wrap [tab-size:4]">
                     {t(product.descriptionKey)}
                   </p>
                   {/* Features Box 

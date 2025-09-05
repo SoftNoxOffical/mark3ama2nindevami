@@ -3,26 +3,27 @@ import { useParams, Link } from 'react-router-dom';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { ArrowLeft, CheckCircle, Truck, Shield, Award } from 'lucide-react';
 import ImageGallery from '../components/ImageGallery';
+import { useTranslation } from 'react-i18next';
 
 const ProductDetail = () => {
   const { id } = useParams();
   const [heroRef, heroVisible] = useScrollAnimation();
   const [detailsRef, detailsVisible] = useScrollAnimation();
   const [featuresRef, featuresVisible] = useScrollAnimation();
+  const { t } = useTranslation();
 
   const products = [
     {
       id: 1,
-      name: 'İPA Silme Bezi',
+      name: 'products.ipaCloth.name',
+      description: 'products.ipaCloth.description',
       image: '/photo/ipa_silme_bezi.jpeg',
       gallery: [
         '/photo/ipa_silme_bezi.jpeg',
         '/photo/ipa_silme_bezi.jpeg',
         '/photo/ipa_silme_bezi.jpeg'
       ],
-      description: '%100 polyester endüstriyel örme silme bezi Ultrasonik kesim ile dilimleme yapılmaktadır, kesilen kenarlardan hav bırakma veya iplik atması yapmaz. 20×40, 30×40, 40×40 veya diğer istenilen ebatlarda dilimlenebilir Tek taraflı desen, 200 gr/m2 Yüzeyi çizmez, hav veya lif bırakmaz. Üstün hidrofilik özellik, yüksek sıvı emme kapasitesi Tüm yüzeyler için uygundur Otomotiv ve boya sanayi hassas yüzey işlemleri için uygundur',
-      longDescription: 'Premium Pamuklu Bez koleksiyonumuz, en kaliteli pamuk liflerinden özel dokuma teknikleri ile üretilmektedir. Yumuşak dokusu ve yüksek emicilik özelliği ile günlük kullanımda maksimum konfor sağlar. Çeşitli renk seçenekleri ile her ihtiyaca uygun çözümler sunar.',
-      features: ['100% Pamuk', 'Yumuşak Doku', 'Dayanıklı', 'Çeşitli Renkler', 'Yüksek Emicilik', 'Kolay Bakım'],
+      
       specifications: {
         'Malzeme': '100% Pamuk',
         'Dokuma Tipi': 'Özel Dokuma',
@@ -31,21 +32,17 @@ const ProductDetail = () => {
         'Boyutlar': 'Özel Ölçü Mevcut',
         'Bakım': 'Makine Yıkanabilir'
       },
-      price: 'Fiyat için iletişime geçin',
-      category: 'Pamuklu Bez'
-    },
+      price: 'Fiyat için iletişime geçin'    },
     {
       id: 2,
-      name: 'İpek Elek Süzme Bezi',
+      name: 'products.silkMesh.name',
+      description: 'products.silkMesh.description',
       image: '/photo/ipek_elek_suzme_bezi.jpeg',
       gallery: [
         '/photo/ipek_elek_suzme_bezi.jpeg',
         '/photo/ipek_elek_suzme_bezi.jpeg',
         '/photo/ipek_elek_suzme_bezi.jpeg'
       ],
-      description: 'İpek elek Bezi, Hava, Su, Yağ, yakıt, vs. filtresi olarak Tekstil, Cam, Seramik, Elektronik, Grafik, Plastik,Gıda, Kimya, Sağlık, Otomobil ve Reklam sektörlerinde kullanılmaktadır. Ürünlerimiz sektörün en kaliteli özelliklerine sahiptir.  Eşit gözenekli, eşit atkı ve çözgü sayıları vardır.  Ürünümüz yüksek kopma mukavemetli %100 polyester monofilament iplikten üretilmiştir.  25 mikron ve üstü tüm özelliklerde ürün yelpazesi bulunmaktadır.',
-      longDescription: 'Organik Bez Koleksiyonumuz, sertifikalı organik pamuk ve doğal boyalarla üretilmektedir. Kimyasal işlem görmemiş bu ürünler, hassas ciltler için güvenli kullanım sağlar. Çevre dostu üretim süreçleri ile sürdürülebilir tekstil anlayışını destekler.',
-      features: ['Organik Malzeme', 'Çevre Dostu', 'Hipoalerjenik', 'Sertifikalı', 'Doğal Boyalar', 'Kimyasalsız'],
       specifications: {
         'Malzeme': 'Sertifikalı Organik Pamuk',
         'Sertifika': 'GOTS Sertifikalı',
@@ -54,21 +51,18 @@ const ProductDetail = () => {
         'Özel Özellik': 'Hipoalerjenik',
         'Çevre Etkisi': 'Karbon Nötr Üretim'
       },
-      price: 'Fiyat için iletişime geçin',
-      category: 'Organik Bez'
+      price: 'Fiyat için iletişime geçin'
     },
     {
       id: 3,
-      name: 'MİKRO-FİBER BEZ',
+      name: 'products.microFiber.name',
+      description: 'products.microFiber.description',
       image: '/photo/mikro-fiber_bez.jpeg',
       gallery: [
         '/photo/mikro-fiber_bez.jpeg',
         '/photo/mikro-fiber_bez.jpeg',
         '/photo/mikro-fiber_bez.jpeg'
       ],
-      description: '<strong>burası değişecek;</strong>  Ev dekorasyonu, perde, masa örtüsü ve döşemelik kumaşlar için özel desenli bezler.  Doğal pamuk ve organik liflerden üretilen, çevre dostu ve sağlıklı ev tekstili ürünleri.  Renk ve desen seçenekleri ile kişisel zevklere uygun çözümler sunuyoruz.',
-      longDescription: 'Özel Desenli Bez koleksiyonumuz, müşterilerimizin özel tasarım taleplerini karşılamak için geliştirilmiştir. Dijital baskı teknolojisi ile canlı renkler ve net detaylar elde edilir. Logo, desen veya özel grafiklerin uygulanabildiği bu ürünler, kurumsal kimlik çalışmaları için idealdir.',
-      features: ['Özel Tasarım', 'Kişiselleştirme', 'Çeşitli Desenler', 'Hızlı Üretim', 'Dijital Baskı', 'Logo Uygulaması'],
       specifications: {
         'Baskı Tipi': 'Dijital Sublimation',
         'Renk Kalitesi': 'Full HD Çözünürlük',
@@ -77,21 +71,18 @@ const ProductDetail = () => {
         'Tasarım Desteği': 'Ücretsiz Tasarım',
         'Dosya Formatı': 'AI, PSD, PDF'
       },
-      price: 'Fiyat için iletişime geçin',
-      category: 'Özel Tasarım'
+      price: 'Fiyat için iletişime geçin'
     },
     {
       id: 4,
-      name: 'Bandocu Eldiveni',
+      name: 'products.bandocuGlove.name',
+      description: 'products.bandocuGlove.description',
       image: '/photo/bandocu_eldiveni.jpeg',
       gallery: [
         '/photo/bandocu_eldiveni.jpeg',
         '/photo/bandocu_eldiveni.jpeg',
         '/photo/bandocu_eldiveni.jpeg'
       ],
-      description: '<strong>burası değişecek;</strong>  Tören yürüyüşleri, konserler ve resmi geçitler için tasarlanan bandocu eldivenimiz; optik beyaz rengi, düzgün dikiş yapısı ve konforlu kalıbıyla kıyafetinizi tamamlar. Nefes alabilen pamuk-polyester karışımı kumaşı terlemeyi azaltır, yumuşak dokusu enstrüman üzerinde iz bırakmaz. Esnek bilek yapısı sayesinde güvenli ve rahat bir kullanım sunar; sık prova ve performanslarda formunu korur.',
-      longDescription: 'Ev Tekstili Koleksiyonumuz, modern yaşam tarzına uygun şık ve fonksiyonel ürünlerden oluşur. Salon, yatak odası ve mutfak için özel tasarlanmış bez ürünleri, evinizin dekorasyonunu tamamlar. Kolay bakım ve uzun ömürlü kullanım için özel işlemlerden geçirilir.',
-      features: ['Ev Kullanımı', 'Şık Tasarım', 'Kolay Bakım', 'Uzun Ömürlü', 'Çok Amaçlı', 'Dekoratif'],
       specifications: {
         'Kullanım Alanı': 'Ev İçi',
         'Malzeme': 'Pamuk-Polyester Karışım',
@@ -100,8 +91,7 @@ const ProductDetail = () => {
         'Çeşitler': 'Perde, Örtü, Yastık',
         'Renk Haslığı': 'Yüksek'
       },
-      price: 'Fiyat için iletişime geçin',
-      category: 'Ev Tekstili'
+      price: 'Fiyat için iletişime geçin'
     }
   ];
 
@@ -139,7 +129,7 @@ const ProductDetail = () => {
   ];
 
   return (
-    <div className="pt-16">
+    <div className="pt-20">
       {/* Breadcrumb */}
       <div className="bg-gray-50 py-4">
         <div className="container mx-auto px-4 lg:px-8">
@@ -148,7 +138,7 @@ const ProductDetail = () => {
             <span>/</span>
             <Link to="/urunlerimiz" className="hover:text-blue-900">Ürünlerimiz</Link>
             <span>/</span>
-            <span className="text-gray-900">{product.name}</span>
+            <span className="text-gray-900">{t(product.name)}</span>
           </div>
         </div>
       </div>
@@ -177,15 +167,16 @@ const ProductDetail = () => {
 
             {/* Product Info */}
             <div>
+              {/* 
               <div className="mb-4">
                 <span className="bg-blue-100 text-blue-900 text-sm px-3 py-1 rounded-full">
                   {product.category}
                 </span>
-              </div>
-              <h1 className="text-4xl font-bold text-gray-900 mb-4">{product.name}</h1>
-              <p className="text-xl text-gray-600 mb-6">{product.description}</p>
-              <p className="text-gray-700 mb-8 leading-relaxed">{product.longDescription}</p>
-
+              </div>*/}
+              <h1 className="text-4xl font-bold text-gray-900 mb-4">{t(product.name)}</h1>
+              <p className="text-xl text-gray-600 mb-6 whitespace-pre-line whitespace-pre-wrap [tab-size:4]">{t(product.description)}</p>
+             {/*  <p className="text-gray-700 mb-8 leading-relaxed whitespace-pre-line whitespace-pre-wrap [tab-size:4]">{t(product.description)}</p> */}
+{/*
               <div className="mb-8">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Özellikler</h3>
                 <div className="grid grid-cols-2 gap-3">
@@ -197,7 +188,7 @@ const ProductDetail = () => {
                   ))}
                 </div>
               </div>
-
+*/}
               <div className="bg-gray-50 p-6 rounded-xl mb-8">
                 <p className="text-2xl font-bold text-blue-900 mb-4">{product.price}</p>
                 <Link 
@@ -285,8 +276,8 @@ const ProductDetail = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{relatedProduct.name}</h3>
-                  <p className="text-gray-600 text-sm mb-4">{relatedProduct.description}</p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{t(relatedProduct.name)} </h3>
+                  <p className="text-gray-600 text-sm mb-4">{t(relatedProduct.description)}</p>
                   <span className="text-blue-900 font-semibold hover:text-yellow-500 transition-colors duration-200">
                     Detayları Gör →
                   </span>

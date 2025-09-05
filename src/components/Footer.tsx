@@ -48,7 +48,9 @@ const Footer = () => {
                 alt="Linenix"
                 className={`h-12 w-12 object-contain transition-colors duration-300`}
               />
-              <span className="text-2xl font-bold text-blue-900">VONZA</span>
+              <span className="font-bold transition-colors duration-300 text-lg sm:text-xl md:text-2xl text-[#014e84]">
+                VONZA
+              </span>
             </div>
             <p className="text-gray-300 mb-4">
               {t('footer.description')}
@@ -134,10 +136,17 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-          <p className="text-gray-400">
+          <a
+            href="https://softnox.com.tr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-white transition-colors"
+            title="softnox.com.tr"
+          >
             {t('footer.copyright')}
-          </p>
+          </a>
         </div>
+
       </div>
     </footer >
   );

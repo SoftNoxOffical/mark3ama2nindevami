@@ -47,17 +47,17 @@ const resources = {
         priceContact: 'Fiyat için iletişime geçin',
         ipaCloth: {
           name: 'İPA SİLME BEZİ',
-          description: '%100 polyester endüstriyel örme silme bezi. Ultrasonik kesim ile dilimleme yapılmaktadır, kesilen kenarlardan hav bırakma veya iplik atması yapmaz. \n20×40, 30×40, 40×40 veya diğer istenilen ebatlarda dilimlenebilir. \nTek taraflı desen, 200 gr/m2. \nYüzeyi çizmez, hav veya lif bırakmaz. \nÜstün hidrofilik özellik, yüksek sıvı emme kapasitesi. \nTüm yüzeyler için uygundur. \nOtomotiv ve boya sanayi hassas yüzey işlemleri için uygundur.',
+          description: '%100 polyester endüstriyel örme silme bezi. Ultrasonik kesim ile dilimleme yapılmaktadır, kesilen kenarlardan hav bırakma veya iplik atması yapmaz. \n\n20×40, 30×40, 40×40 veya diğer istenilen ebatlarda dilimlenebilir. \nTek taraflı desen, 200 gr/m2. \nYüzeyi çizmez, hav veya lif bırakmaz. \nÜstün hidrofilik özellik, yüksek sıvı emme kapasitesi. \nTüm yüzeyler için uygundur. \nOtomotiv ve boya sanayi hassas yüzey işlemleri için uygundur.',
           features: '✓ Steril üretim ✓ Antibakteriyel özellik ✓ Tek kullanımlık seçenekler'
         },
         silkMesh: {
-          name: 'İPEK ELEK SÜZME BEZİ',
-          description: 'İpek elek Bezi, Hava, Su, Yağ, yakıt, vs. filtresi olarak Tekstil, Cam, Seramik, Elektronik, Grafik, Plastik,Gıda, Kimya, Sağlık, Otomobil ve Reklam sektörlerinde kullanılmaktadır.',
+          name: 'İPEK ELEK SÜZME BEZİ (SCREEN MESH)',
+          description: 'İpek elek bezi, hava, su, yağ ve yakıt gibi akışkanların filtresi olarak tekstil, cam, seramik, elektronik, grafik, plastik, gıda, kimya, sağlık, otomotiv ve reklam sektörlerinde kullanılmaktadır. \n\nÜrünlerimiz sektörün en kaliteli özelliklerine sahiptir.  Eşit gözenekli, eşit atkı ve çözgü sayıları vardır.  Ürünümüz yüksek kopma mukavemetli %100 polyester monofilament iplikten üretilmiştir.  25 mikron ve üstü tüm özelliklerde ürün yelpazesi bulunmaktadır. \n\nRENK \t                           :   BEYAZ \n\nUZUNLUK                     :  İstenilen ebatlarda hizmetimiz mevcuttur',
           features: '✓ Yüksek emicilik ✓ Kimyasal direnç ✓ Yıkanabilir ve tekrar kullanılabilir'
         },
         microFiber: {
           name: 'MİKRO-FİBER BEZ',
-          description: 'Ev dekorasyonu, perde, masa örtüsü ve döşemelik kumaşlar için özel desenli bezler.',
+          description: 'Ultra ince mikrofiber dokudan üretilmiş, yüksek emicilik ve iz bırakmayan temizlik bezi.\nKuru kullanımda tozu statik olarak toplar; nemli kullanımda cam, paslanmaz ve parlak yüzeylerde lekesiz sonuç verir.\n\nYumuşak yapısı yüzeyleri çizmez, hav ve lif bırakmaz.\nKimyasal gerektirmeden etkili temizlik sağlar; çevre ve kullanıcı dostudur.\nDefalarca yıkanabilir, formunu ve performansını korur.\n30×30, 40×40 gibi standart ebatlar ve isteğe özel ölçüler mevcuttur.',
           features: '✓ Organik malzemeler ✓ Özel desenler ✓ Renk haslığı garantisi'
         },
         bandocuGlove: {
