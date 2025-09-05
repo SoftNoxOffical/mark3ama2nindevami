@@ -127,7 +127,7 @@ const Home = () => {
             </div>
             <div className="text-center mt-8">
               <Link
-                to="/products"
+                to="/urunlerimiz"
                 className="inline-block bg-blue-900 hover:bg-blue-800 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105"
               >
                 {t('home.viewAllProducts')}
