@@ -1,11 +1,45 @@
 import React, { useState } from 'react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, Check, Clock, Copy, Send } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
   const [heroRef, heroVisible] = useScrollAnimation();
   const [formRef, formVisible] = useScrollAnimation();
   const [infoRef, infoVisible] = useScrollAnimation();
+  const { t } = useTranslation();
+
+
+  const email = "info@vonza.com.tr";
+  const phone_number = "+90 530 830 34 22";   // ekranda görünen
+  const phone_whatsup = "+905308303422";      // tel:/WhatsApp için E.164
+
+  const address1 = t("footer.address1");
+  const address2 = t("footer.address2");
+
+  const mapsUrl = (addr: string) =>
+    `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(addr)}`;
+  // Üst tarafa (gerekliyse):
+  const onKeyActivate = (e: React.KeyboardEvent, fn: () => void) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      fn();
+    }
+  };
+
+  const handleCall = () => window.location.href = `tel:${phone_whatsup}`;
+  const handleEmail = () => window.location.href = `mailto:${email}`;
+  const handleMap1 = () => window.open(mapsUrl(address1), "_blank", "noopener,noreferrer");
+  const handleMap2 = () => window.open(mapsUrl(address2), "_blank", "noopener,noreferrer");
+
+  const [copied, setCopied] = useState(false);
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    } catch { }
+  };
 
   // sayfanın üstünde:
   const GOOGLE_FORM_ACTION =
@@ -20,16 +54,16 @@ const Contact = () => {
     message: ''
   });
 
-// Doğru entry ID'ler
-const ENTRY = {
-  firstName: "entry.2005620554",   // Ad
-  lastName:  "entry.41818161",     // Soyad
-  company:   "entry.1751242971",   // Şirket Adı
-  email:     "entry.1045781291",   // E-posta
-  address:   "entry.1065046570",   // Adres (tek alan)
-  phone:     "entry.1166974658",   // Telefon numarası
-  message:   "entry.839337160",    // Notlar
-};
+  // Doğru entry ID'ler
+  const ENTRY = {
+    firstName: "entry.2005620554",   // Ad
+    lastName: "entry.41818161",     // Soyad
+    company: "entry.1751242971",   // Şirket Adı
+    email: "entry.1045781291",   // E-posta
+    address: "entry.1065046570",   // Adres (tek alan)
+    phone: "entry.1166974658",   // Telefon numarası
+    message: "entry.839337160",    // Notlar
+  };
 
 
   function submitToGoogleForm(data: typeof formData) {
@@ -46,38 +80,38 @@ const ENTRY = {
       form.appendChild(input);
     };
 
-const [first, ...rest] = (data.name || "").trim().split(/\s+/);
-  const last = rest.join(" ");
+    const [first, ...rest] = (data.name || "").trim().split(/\s+/);
+    const last = rest.join(" ");
 
-  // Ad, Soyad
-  add(ENTRY.firstName, first || "-");
-  add(ENTRY.lastName, last || "-");
+    // Ad, Soyad
+    add(ENTRY.firstName, first || "-");
+    add(ENTRY.lastName, last || "-");
 
-  // Şirket
-  add(ENTRY.company, data.company || "-");
+    // Şirket
+    add(ENTRY.company, data.company || "-");
 
-  // E-posta
-  add(ENTRY.email, data.email);
+    // E-posta
+    add(ENTRY.email, data.email);
 
-  // Adres: location + country birleşik
-  const address = [data.location, data.country].filter(Boolean).join(", ");
-  add(ENTRY.address, address || "-");
+    // Adres: location + country birleşik
+    const address = [data.location, data.country].filter(Boolean).join(", ");
+    add(ENTRY.address, address || "-");
 
-  // Telefon
-  add(ENTRY.phone, data.phone);
+    // Telefon
+    add(ENTRY.phone, data.phone);
 
-  // Notlar (bizde "message")
-  add(ENTRY.message, data.message || "-");
+    // Notlar (bizde "message")
+    add(ENTRY.message, data.message || "-");
 
-  document.body.appendChild(form);
-  form.submit();
-  document.body.removeChild(form);
-}
-const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
-  submitToGoogleForm(formData);
-  alert("Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.");
- 
+    document.body.appendChild(form);
+    form.submit();
+    document.body.removeChild(form);
+  }
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    submitToGoogleForm(formData);
+    alert("Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.");
+
   }
 
 
@@ -156,42 +190,112 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         className={`py-20 bg-white transition-all duration-1000 delay-200 ${infoVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'
           }`}
       >
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">İletişim Bilgilerimiz</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Sorularınız için bizimle iletişime geçebilirsiniz
-            </p>
-          </div>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('footer.contactTitle')}</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Sorularınız için bizimle iletişime geçebilirsiniz
+          </p>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {contactInfo.map((info, index) => (
-              <div
-                key={index}
-                className={`bg-gray-50 p-6 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105 ${infoVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                  }`}
-                style={{ transitionDelay: `${index * 150}ms` }}
-              >
-                <div className={`${info.color} w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center mx-auto mb-4`}>
-                  {info.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{info.title}</h3>
-                {info.details.map((detail, detailIndex) => (
-                  <p key={detailIndex} className="text-gray-600 text-sm mb-1">{detail}</p>
-                ))}
-              </div>
-            ))}
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
 
-          {/* Map Placeholder */}
-          <div className="bg-gray-200 rounded-2xl h-64 flex items-center justify-center mb-8">
-            <div className="text-center">
-              <MapPin className="h-12 w-12 text-gray-400 mx-auto mb-2" />
-              <p className="text-gray-600">Harita Konumu</p>
-              <p className="text-sm text-gray-500">Şişli / İstanbul</p>
+          {/* Telefon (TÜM KART TIKLANABİLİR) */}
+          <div
+            role="button"
+            tabIndex={0}
+            onClick={handleCall}
+            onKeyDown={(e) => onKeyActivate(e, handleCall)}
+            className={`cursor-pointer bg-gray-50 p-6 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105 ${infoVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
+            style={{ transitionDelay: `0ms` }}
+            aria-label={`Telefonu ara: ${phone_number}`}
+          >
+            <div className="text-blue-600 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center mx-auto mb-4">
+              <Phone className="h-6 w-6" />
             </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Telefon</h3>
+            <span className="block text-blue-700 font-medium">{phone_number}</span>
+          </div>
+
+          {/* E-posta (kart tıklanınca mailto, kopyala butonu propagation durdurur) */}
+          <div
+            role="button"
+            tabIndex={0}
+            onClick={handleEmail}
+            onKeyDown={(e) => onKeyActivate(e, handleEmail)}
+            className={`cursor-pointer bg-gray-50 p-6 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105 ${infoVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
+            style={{ transitionDelay: `150ms` }}
+            aria-label={`E-posta gönder: ${email}`}
+          >
+            <div className="text-green-600 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center mx-auto mb-4">
+              <Mail className="h-6 w-6" />
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">E-posta</h3>
+
+            <div className="flex items-center justify-center gap-2">
+              <span className="text-blue-700 font-medium">{email}</span>
+              <button
+                type="button"
+                onClick={(e) => { e.stopPropagation(); copyEmail(); }}
+                aria-label="E-postayı kopyala"
+                title={copied ? "Kopyalandı!" : "Kopyala"}
+                className="p-1 rounded hover:bg-black/5 transition"
+              >
+                {copied ? <Check size={16} /> : <Copy size={16} />}
+              </button>
+            </div>
+
+            {copied && (
+              <span
+                role="status"
+                aria-live="polite"
+                className="mt-3 inline-flex items-center gap-1 rounded-md bg-green-400 text-black text-xs font-semibold px-2 py-1 shadow"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Check size={12} />
+                mail adresi kopyalandı
+              </span>
+            )}
+          </div>
+
+          {/* Adres 1 */}
+          <div
+            role="button"
+            tabIndex={0}
+            onClick={handleMap1}
+            onKeyDown={(e) => onKeyActivate(e, handleMap1)}
+            className={`cursor-pointer bg-gray-50 p-6 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105 ${infoVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
+            style={{ transitionDelay: `300ms` }}
+            aria-label={`Adres 1 haritada aç: ${address1}`}
+          >
+            <div className="text-red-600 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center mx-auto mb-4">
+              <MapPin className="h-6 w-6" />
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Adres 1</h3>
+            <span className="text-blue-700 font-medium">{address1}</span>
+          </div>
+
+          {/* Adres 2 */}
+          <div
+            role="button"
+            tabIndex={0}
+            onClick={handleMap2}
+            onKeyDown={(e) => onKeyActivate(e, handleMap2)}
+            className={`cursor-pointer bg-gray-50 p-6 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105 ${infoVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
+            style={{ transitionDelay: `450ms` }}
+            aria-label={`Adres 2 haritada aç: ${address2}`}
+          >
+            <div className="text-purple-600 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center mx-auto mb-4">
+              <MapPin className="h-6 w-6" />
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Adres 2</h3>
+            <span className="text-blue-700 font-medium">{address2}</span>
           </div>
         </div>
+
       </section>
 
       {/* Contact Form Section */}

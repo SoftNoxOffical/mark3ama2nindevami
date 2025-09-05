@@ -74,11 +74,11 @@ const Header = () => {
             >
               {t('nav.quote')}
             </Link>
-            <LanguageSelector />
+            {/*<LanguageSelector />*/}
           </nav>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden flex items-center space-x-2 sm:space-x-4">            <LanguageSelector />
+          <div className="lg:hidden flex items-center space-x-2 sm:space-x-4">           {/*<LanguageSelector />*/}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className={`transition-colors duration-300 ${isScrolled ? 'text-gray-900' : 'text-gray-900'
