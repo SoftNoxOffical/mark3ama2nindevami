@@ -9,7 +9,7 @@ const Quote = () => {
   const [formRef, formVisible] = useScrollAnimation();
 
   const FORM_URL =
-    "https://docs.google.com/forms/d/e/1FAIpQLScdlbr8yP67NJ6UTeDQwQudYO47aVse2oTKFMadm-X20Ber9A/viewform?usp=sharing&ouid=108226957756009257988";
+    "https://docs.google.com/forms/d/e/1FAIpQLSeqycag4maubVF3TJmPlGuyBzYXPofVN0EMGE25Q50R2mvT6w/viewform?usp=header";
 
   const [isTouch, setIsTouch] = useState(false);
 
