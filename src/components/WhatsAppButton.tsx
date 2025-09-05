@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 const WhatsAppButton: React.FC = () => {
   const { t } = useTranslation();
   
-  const phoneNumber = '+905511621359'; // Telefon numarasını buradan değiştirebilirsiniz
+  const phoneNumber = '+905308303422'; // Telefon numarasını buradan değiştirebilirsiniz
   const message = encodeURIComponent(t('whatsapp.message'));
   
   const handleWhatsAppClick = () => {

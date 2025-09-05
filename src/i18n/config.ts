@@ -14,7 +14,7 @@ const resources = {
       },
       whatsapp: {
         tooltip: "WhatsApp ile iletişime geçin",
-        message: "Merhaba! Size nasıl yardımcı olabilirim?"
+        message: "Merhaba, Vonza Tekstil ile iletişime geçmek istiyorum."
       },
       // Home page
       home: {
@@ -48,22 +48,22 @@ const resources = {
         ipaCloth: {
           name: 'İPA SİLME BEZİ',
           description: '%100 polyester endüstriyel örme silme bezi. Ultrasonik kesim ile dilimleme yapılmaktadır, kesilen kenarlardan hav bırakma veya iplik atması yapmaz.',
-          features: ['100% Polyester', 'Ultrasonik Kesim', 'Hav Bırakmaz', 'Yüksek Emicilik']
+          features: '✓ Steril üretim ✓ Antibakteriyel özellik ✓ Tek kullanımlık seçenekler'
         },
         silkMesh: {
           name: 'İPEK ELEK SÜZME BEZİ',
           description: 'İpek elek Bezi, Hava, Su, Yağ, yakıt, vs. filtresi olarak Tekstil, Cam, Seramik, Elektronik, Grafik, Plastik,Gıda, Kimya, Sağlık, Otomobil ve Reklam sektörlerinde kullanılmaktadır.',
-          features: ['Eşit Gözenekli', 'Yüksek Mukavemet', '100% Polyester', 'Çok Sektörlü Kullanım']
+          features: '✓ Yüksek emicilik ✓ Kimyasal direnç ✓ Yıkanabilir ve tekrar kullanılabilir'
         },
         microFiber: {
           name: 'MİKRO-FİBER BEZ',
           description: 'Ev dekorasyonu, perde, masa örtüsü ve döşemelik kumaşlar için özel desenli bezler.',
-          features: ['Özel Tasarım', 'Çevre Dostu', 'Organik Malzeme', 'Renk Haslığı']
+          features: '✓ Organik malzemeler ✓ Özel desenler ✓ Renk haslığı garantisi'
         },
         bandocuGlove: {
           name: 'BANDOCU ELDİVENİ',
           description: 'Tören yürüyüşleri, konserler ve resmi geçitler için tasarlanan bandocu eldivenimiz; optik beyaz rengi, düzgün dikiş yapısı ve konforlu kalıbıyla kıyafetinizi tamamlar.',
-          features: ['Optik Beyaz', 'Konforlu Kalıp', 'Nefes Alabilir', 'Profesyonel Görünüm']
+          features: '✓ Leke direnci ✓ Sık yıkamaya dayanıklı ✓ Profesyonel görünüm'
         }
       },
       // About page
