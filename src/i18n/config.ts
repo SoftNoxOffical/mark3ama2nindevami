@@ -14,23 +14,23 @@ const resources = {
       },
       whatsapp: {
         tooltip: "WhatsApp ile iletişime geçin",
-        message: "Merhaba, Vonza Tekstil ile iletişime geçmek istiyorum."
+        message: " "
       },
       // Home page
       home: {
-        heroTitle: 'Özel Üretim',
-        heroSubtitle: 'Bez Ürünleri',
-        heroDescription: 'Kaliteli hammaddeler ile özel tasarım bez üretimi yapıyoruz',
-        heroButton: 'Ürünlerimizi İnceleyin',
+        heroTitle: 'Otomotiv Teknik Tekstil',
+        heroSubtitle: 'Ürünleri',
+        heroDescription: 'Kaliteli hammaddeler ile üretim yapıyoruz',
+        heroButton: 'Ürün Kataloğu İçin Tıklayınız',
         productsTitle: 'Ürün Koleksiyonumuz',
-        productsSubtitle: 'Yüksek kaliteli bez ürünlerimizi keşfedin',
+        productsSubtitle: '',
         featuresTitle: 'Neden Bizi Tercih Edin?',
         featuresSubtitle: 'Kaliteli hizmet ve güvenilir çözümler sunuyoruz',
         viewAllProducts: 'Tüm Ürünleri Gör',
         productTypesTitle: 'Ürün Çeşitlerimiz ve Kullanım Alanları',
-        productTypesSubtitle: 'Farklı sektörlere yönelik kaliteli bez ürünleri üretiyoruz. Her ürünümüz özel ihtiyaçlara göre tasarlanmıştır.',
+        productTypesSubtitle: 'Her ürünümüz özel ihtiyaçlara göre tasarlanmıştır.',
         specialNeedsTitle: 'Özel İhtiyaçlarınız İçin Çözüm Arıyorsunuz?',
-        specialNeedsDescription: 'Hangi sektörde olursanız olun, size özel bez ürünleri üretebiliriz. Detaylı bilgi almak için bizimle iletişime geçin.',
+        specialNeedsDescription: 'Hangi sektörde olursanız olun, size özel ürünleri üretebiliriz. Detaylı bilgi almak için bizimle iletişime geçin.',
         contactButton: 'Teklif Alın'
       },
       // Products
@@ -52,17 +52,17 @@ const resources = {
         },
         silkMesh: {
           name: 'İPEK ELEK SÜZME BEZİ (SCREEN MESH)',
-          description: 'İpek elek bezi, hava, su, yağ ve yakıt gibi akışkanların filtresi olarak tekstil, cam, seramik, elektronik, grafik, plastik, gıda, kimya, sağlık, otomotiv ve reklam sektörlerinde kullanılmaktadır. \n\nÜrünlerimiz sektörün en kaliteli özelliklerine sahiptir.  Eşit gözenekli, eşit atkı ve çözgü sayıları vardır.  Ürünümüz yüksek kopma mukavemetli %100 polyester monofilament iplikten üretilmiştir.  25 mikron ve üstü tüm özelliklerde ürün yelpazesi bulunmaktadır. \n\nRENK \t                           :   BEYAZ \n\nUZUNLUK                     :  İstenilen ebatlarda hizmetimiz mevcuttur',
+          description: 'İpek elek bezi, hava, su, yağ ve yakıt gibi akışkanların filtresi olarak tekstil, cam, seramik, elektronik, grafik, plastik, gıda, kimya, sağlık, otomotiv ve reklam sektörlerinde kullanılmaktadır. \n\nÜrünlerimiz sektörün en kaliteli özelliklerine sahiptir.  Eşit gözenekli, eşit atkı ve çözgü sayıları vardır.  Ürünümüz yüksek kopma mukavemetli %100 polyester monofilament iplikten üretilmiştir.  25 mikron ve üstü tüm özelliklerde ürün gamı bulunmaktadır. ',
           features: '✓ Yüksek emicilik ✓ Kimyasal direnç ✓ Yıkanabilir ve tekrar kullanılabilir'
         },
         microFiber: {
           name: 'MİKRO-FİBER BEZ',
-          description: 'Ultra ince mikrofiber dokudan üretilmiş, yüksek emicilik ve iz bırakmayan temizlik bezi.\nKuru kullanımda tozu statik olarak toplar; nemli kullanımda cam, paslanmaz ve parlak yüzeylerde lekesiz sonuç verir.\n\nYumuşak yapısı yüzeyleri çizmez, hav ve lif bırakmaz.\nKimyasal gerektirmeden etkili temizlik sağlar; çevre ve kullanıcı dostudur.\nDefalarca yıkanabilir, formunu ve performansını korur.\n30×30, 40×40 gibi standart ebatlar ve isteğe özel ölçüler mevcuttur.',
+          description: '%80 polyester %20 poliamid ipliğinden üretilmiştir. Kısa hav boyu sayesinde hem kurulama hemde temizleme yapılabilmektedir. Tüm yüzeylerde rahatlıkla kullanılmaktadır. Özel teknoloji boyama ile üretilerek kullanım kalitesi üst seviyede sunulmaktadır.  Mat bir görünüme sahiptir. Kolay temizlenebilir yapısı sayesinde her türlü kirli noktada rahatlıkla kullanılabilir. Talep edilen cinste 40x40cm ebatında üretilmektedir.',
           features: '✓ Organik malzemeler ✓ Özel desenler ✓ Renk haslığı garantisi'
         },
         bandocuGlove: {
           name: 'BANDOCU ELDİVENİ',
-          description: '%100 Polyester \n Hav ve iz bırakmayan minimum dikişle tasarlanmış eldivendir.',
+          description: '%100 Polyester \nHav ve iz bırakmayan minimum dikişle tasarlanmış eldivendir.\nHassas çalışmalarda kullanılmak üzere tasarlanmıştır. Ürün koruma amaçlıdır. İnce, elastik kumaşı sayesinde eli tam olarak kavrar, üst düzeyde hassasiyet sağlar. ',
           features: '✓ Leke direnci ✓ Sık yıkamaya dayanıklı ✓ Profesyonel görünüm'
         }
       },
@@ -228,7 +228,7 @@ const resources = {
       },
       // Footer
       footer: {
-        description: 'Özel üretim bez ve tekstil ürünleri konusunda uzman firmamız, kaliteli hizmet anlayışı ile müşterilerine en iyi çözümleri sunar.',
+        description: 'Özel üretim bez ve teknik tekstil ürünleri konusunda uzman firmamız, kaliteli hizmet anlayışı ile müşterilerine en iyi çözümleri sunar.',
         productsTitle: 'Ürünlerimiz',
         contactTitle: 'İletişim Bilgileri',
         copyright: '© 2025 SoftNox. Tüm hakları saklıdır.',

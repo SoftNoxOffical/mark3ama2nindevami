@@ -12,7 +12,7 @@ const About = () => {
   const stats = [
     { number: '10+', label: 'Yıl Deneyim' },
     { number: '10.000+', label: 'Günlük Üretim Kapasitesi' },
-    { number: '200+', label: 'Kurumsal Referans' },
+    { number: '20+', label: 'Kurumsal Referans' },
     { number: '24/7', label: 'Destek Hizmeti' }
   ];
 
@@ -82,7 +82,7 @@ const About = () => {
               <div className="h-1 w-16 bg-amber-500 rounded mb-6" />
 
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Vonza Tekstil Otomotiv San. ve Tic. Ltd. Şti. olarak, <strong>10 yılı aşkın</strong> tecrübemizle
+                Vonza Tekstil Otomotiv San. ve Tic. Ltd. Şti. olarak, <strong>2013 yılından beri</strong> tecrübeli ekibimizle
                 otomotiv yan sanayi sektöründe faaliyet gösteren boyahanelere yüksek kaliteli teknik tekstil ürünleri
                 tedarik etmekteyiz.
               </p>
@@ -106,9 +106,9 @@ const About = () => {
             </div>
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/5708971/pexels-photo-5708971.jpeg"
+                src="public/photo/hakkımızda_photo.jpeg"
                 alt="Fabrika İçi"
-                className="rounded-2xl shadow-2xl w-full"
+                className="rounded-2xl shadow-2xl w-90"
               />
               <div className="absolute -bottom-6 -right-6 bg-yellow-500 text-black p-6 rounded-xl shadow-xl">
                 <p className="text-2xl font-bold">10+</p>

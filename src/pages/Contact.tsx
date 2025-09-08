@@ -273,7 +273,7 @@ const Contact = () => {
             <div className="text-red-600 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center mx-auto mb-4">
               <MapPin className="h-6 w-6" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Adres 1</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Merkez</h3>
             <span className="text-blue-700 font-medium">{address1}</span>
           </div>
 
@@ -291,7 +291,7 @@ const Contact = () => {
             <div className="text-purple-600 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center mx-auto mb-4">
               <MapPin className="h-6 w-6" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Adres 2</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Fabrika</h3>
             <span className="text-blue-700 font-medium">{address2}</span>
           </div>
         </div>
