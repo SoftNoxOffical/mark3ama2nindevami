@@ -15,28 +15,28 @@ const Products = () => {
       name: 'products.ipaCloth.name',
       description: 'products.ipaCloth.description',
       image: '/photo/ipa_silme_bezi.jpeg',
-      price: 'Fiyat için iletişime geçin'
+      price: 'products.priceContact' 
     },
     {
       id: 2,
       name: 'products.silkMesh.name',
       description: 'products.silkMesh.description',
       image: '/photo/ipek_elek_suzme_bezi.jpeg',
-      price: 'Fiyat için iletişime geçin'
+      price: 'products.priceContact' 
     },
     {
       id: 3,
       name: 'products.microFiber.name',
       description: 'products.microFiber.description',
       image: '/photo/mikro-fiber_bez.jpeg',
-      price: 'Fiyat için iletişime geçin'
+      price: 'products.priceContact' 
     },
     {
       id: 4,
       name: 'products.bandocuGlove.name',
       description: 'products.bandocuGlove.description',
       image: '/photo/bandocu_eldiveni.jpeg',
-      price: 'Fiyat için iletişime geçin'
+      price: 'products.priceContact' 
     }
   ];
 
@@ -59,9 +59,9 @@ const Products = () => {
         </div>
 
         <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-4">
-          <h3 className="text-2xl font-bold mb-4">Özel Üretim</h3>
+          <h3 className="text-2xl font-bold mb-4">{t('products.title')}</h3>
           <p className="text-xl mb-6 opacity-90">
-            İhtiyaçlarınıza özel bez üretimi. Bizimle iletişime geçin!
+            {t('products.specialProductionDescription')}
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -69,7 +69,7 @@ const Products = () => {
               to="/iletisim"
               className="inline-block bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-3 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
             >
-              İletişime Geçin
+              {t('products.contactUs')}   
             </Link>
 
             {/* İNDİRME BUTONU */}
@@ -79,7 +79,7 @@ const Products = () => {
               className="inline-flex items-center gap-2 bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-blue-50"
             // iOS Safari "download" yerine yeni sekmede açar; normaldir
             >
-              Kataloğu İndir
+              {t('products.dowloadPDF')}   
               <Download className="h-5 w-5" />
             </a>
           </div>
@@ -124,7 +124,7 @@ const Products = () => {
       >
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Ürün Koleksiyonumuz</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('products.collectionTitle')}   </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               {/*İhtiyaçlarınıza uygun bez ürünlerini bulun*/}
             </p>
@@ -142,7 +142,7 @@ const Products = () => {
                 <div className="relative h-64 overflow-hidden shrink-0">
                   <img
                     src={product.image}
-                    alt={t('product.name')}
+                    alt={t(product.name)}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
@@ -157,12 +157,12 @@ const Products = () => {
 
                   {/* CTA → En alta */}
                   <div className="mt-auto border-t pt-4 flex items-center justify-between">
-                    <p className="text-sm text-gray-500">{product.price}</p>
+                    <p className="text-sm text-gray-500">{t(product.price)}</p>
                     <Link
                       to={`/urun/${product.id}`}
                       className="bg-blue-900 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors duration-200"
                     >
-                      Detay
+                      {t('products.detail')}
                     </Link>
                   </div>
                 </div>
@@ -174,15 +174,15 @@ const Products = () => {
           {/* Call to Action */}
           <div className="text-center mt-16">
             <div className="bg-blue-900 text-white p-8 rounded-2xl">
-              <h3 className="text-2xl font-bold mb-4">Özel Üretim Talebi</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('products.specialProductionTitle')}  </h3>
               <p className="text-xl mb-6 opacity-90">
-                İhtiyaçlarınıza özel bez üretimi yapıyoruz. Bizimle iletişime geçin!
+                {t('products.ctaDescription')} 
               </p>
               <Link
                 to="/teklifal"
                 className="inline-block bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-3 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
               >
-                Teklif Al
+                {t('nav.quote')}
               </Link>
             </div>
           </div>

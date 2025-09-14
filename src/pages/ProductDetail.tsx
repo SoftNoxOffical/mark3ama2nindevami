@@ -19,39 +19,25 @@ const ProductDetail = () => {
       description: 'products.ipaCloth.description',
       image: '/photo/ipa_silme_bezi.jpeg',
       gallery: [
-        '/photo/ipa_silme_bezi.jpeg',
+        '/photo/İpa_silme_bez.jpeg',
         '/photo/ipa_silme_bezi.jpeg',
         '/photo/ipa_silme_bezi.jpeg'
-      ],
-      
-      specifications: {
-        'Malzeme': '100% Pamuk',
-        'Dokuma Tipi': 'Özel Dokuma',
-        'Ağırlık': '200-300 GSM',
-        'Renk Seçenekleri': '15+ Farklı Renk',
-        'Boyutlar': 'Özel Ölçü Mevcut',
-        'Bakım': 'Makine Yıkanabilir'
-      },
-      price: 'Fiyat için iletişime geçin'    },
+      ],  
+      specifications: t("products.ipaCloth,specifications", { returnObjects: true }) as string[],
+      price: 'products.priceContact' 
+    },
     {
       id: 2,
       name: 'products.silkMesh.name',
       description: 'products.silkMesh.description',
       image: '/photo/ipek_elek_suzme_bezi.jpeg',
       gallery: [
-        '/photo/ipek_elek_suzme_bezi.jpeg',
+        '/photo/Boya_süzme_bezi.jpeg',
         '/photo/ipek_elek_suzme_bezi.jpeg',
         '/photo/ipek_elek_suzme_bezi.jpeg'
       ],
-      specifications: {
-        'Malzeme': 'Sertifikalı Organik Pamuk',
-        'Sertifika': 'GOTS Sertifikalı',
-        'Boyalar': 'Doğal Bitkisel Boyalar',
-        'Ağırlık': '180-250 GSM',
-        'Özel Özellik': 'Hipoalerjenik',
-        'Çevre Etkisi': 'Karbon Nötr Üretim'
-      },
-      price: 'Fiyat için iletişime geçin'
+      specifications: t("products.ipaCloth,specifications", { returnObjects: true }) as string[],
+      price: 'products.priceContact' 
     },
     {
       id: 3,
@@ -59,19 +45,12 @@ const ProductDetail = () => {
       description: 'products.microFiber.description',
       image: '/photo/mikro-fiber_bez.jpeg',
       gallery: [
-        '/photo/mikro-fiber_bez.jpeg',
+        '/photo/Mikro_fiber_bez.jpeg',
         '/photo/mikro-fiber_bez.jpeg',
         '/photo/mikro-fiber_bez.jpeg'
       ],
-      specifications: {
-        'Baskı Tipi': 'Dijital Sublimation',
-        'Renk Kalitesi': 'Full HD Çözünürlük',
-        'Minimum Sipariş': '50 Adet',
-        'Üretim Süresi': '7-10 İş Günü',
-        'Tasarım Desteği': 'Ücretsiz Tasarım',
-        'Dosya Formatı': 'AI, PSD, PDF'
-      },
-      price: 'Fiyat için iletişime geçin'
+      specifications: t("products.ipaCloth,specifications", { returnObjects: true }) as string[],
+      price: 'products.priceContact' 
     },
     {
       id: 4,
@@ -83,15 +62,8 @@ const ProductDetail = () => {
         '/photo/bandocu_eldiveni.jpeg',
         '/photo/bandocu_eldiveni.jpeg'
       ],
-      specifications: {
-        'Kullanım Alanı': 'Ev İçi',
-        'Malzeme': 'Pamuk-Polyester Karışım',
-        'Bakım': 'Makine Yıkanabilir 40°C',
-        'Ütüleme': 'Orta Sıcaklık',
-        'Çeşitler': 'Perde, Örtü, Yastık',
-        'Renk Haslığı': 'Yüksek'
-      },
-      price: 'Fiyat için iletişime geçin'
+      specifications: t("products.ipaCloth,specifications", { returnObjects: true }) as string[],
+      price: 'products.priceContact' 
     }
   ];
 
@@ -101,19 +73,19 @@ const ProductDetail = () => {
     return (
       <div className="pt-16 min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Ürün Bulunamadı</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">{t('common.productNotFound')}</h1>
           <Link to="/urunlerimiz" className="text-blue-900 hover:text-blue-700">
-            Ürünler sayfasına dön
+            {t('common.backToProducts')}
           </Link>
         </div>
       </div>
     );
   }
-
+{/* 
   const benefits = [
     {
       icon: <Truck className="h-6 w-6" />,
-      title: 'Hızlı Teslimat',
+      title:  {t('common.backToProducts')},
       description: 'Türkiye geneli hızlı ve güvenli teslimat'
     },
     {
@@ -127,16 +99,16 @@ const ProductDetail = () => {
       description: '15 yıllık deneyimle profesyonel destek'
     }
   ];
-
+*/}
   return (
     <div className="pt-20">
       {/* Breadcrumb */}
       <div className="bg-gray-50 py-4">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex items-center space-x-2 text-sm text-gray-600">
-            <Link to="/" className="hover:text-blue-900">Ana Sayfa</Link>
+            <Link to="/" className="hover:text-blue-900">{t('common.breadcrumb.home')}</Link>
             <span>/</span>
-            <Link to="/urunlerimiz" className="hover:text-blue-900">Ürünlerimiz</Link>
+            <Link to="/urunlerimiz" className="hover:text-blue-900">{t('common.breadcrumb.products')}</Link>
             <span>/</span>
             <span className="text-gray-900">{t(product.name)}</span>
           </div>
@@ -156,7 +128,7 @@ const ProductDetail = () => {
             className="inline-flex items-center space-x-2 text-blue-900 hover:text-blue-700 mb-8"
           >
             <ArrowLeft size={20} />
-            <span>Ürünlere Geri Dön</span>
+            <span>{t('productDetail.backToProducts')} </span>
           </Link>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -190,12 +162,12 @@ const ProductDetail = () => {
               </div>
 */}
               <div className="bg-gray-50 p-6 rounded-xl mb-8">
-                <p className="text-2xl font-bold text-blue-900 mb-4">{product.price}</p>
+                <p className="text-2xl font-bold text-blue-900 mb-4">{t(product.price)}</p>
                 <Link 
                   to="/iletisim"
                   className="w-full bg-blue-900 hover:bg-blue-800 text-white py-3 px-6 rounded-lg font-semibold text-center block transition-colors duration-200"
                 >
-                  Fiyat Teklifi Al
+                  {t('productDetail.getQuote')} 
                 </Link>
               </div>
             </div>
@@ -257,8 +229,8 @@ const ProductDetail = () => {
       >
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Benzer Ürünler</h2>
-            <p className="text-xl text-gray-600">Diğer kaliteli bez ürünlerimizi keşfedin</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('productDetail.relatedProducts')} </h2>
+            <p className="text-xl text-gray-600">{t('productDetail.relatedProductsSubtitle')} </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -279,7 +251,7 @@ const ProductDetail = () => {
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{t(relatedProduct.name)} </h3>
                   <p className="text-gray-600 text-sm mb-4">{t(relatedProduct.description)}</p>
                   <span className="text-blue-900 font-semibold hover:text-yellow-500 transition-colors duration-200">
-                    Detayları Gör →
+                    {t('productDetail.viewDetails')} 
                   </span>
                 </div>
               </Link>

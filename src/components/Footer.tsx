@@ -7,8 +7,8 @@ import logo from "/photo/logo_only.png";
 const Footer = () => {
   const location = useLocation();
   const { t } = useTranslation();
-  const address1 = t('footer.address1');
-  const address2 = t('footer.address2');
+  const address1 = 'footer.address1';
+  const address2 = 'footer.address2';
   const email = "info@vonza.com.tr";
   const phone_number = "+90 530 830 34 22";
   const phone_whatsup = "+905308303422";
@@ -101,7 +101,7 @@ const Footer = () => {
                     className="ml-2 inline-flex items-center gap-1 rounded-md bg-green-400 text-black text-xs font-semibold px-2 py-1 shadow transition-opacity"
                   >
                     <Check size={12} />
-                    mail adresi kopyalandı
+                    {t('contact.coppiedEmail')}
                   </span>
                 )}
               </div>
@@ -116,7 +116,7 @@ const Footer = () => {
                 title="Google Maps’te aç"
               >
                 <MapPin size={16} />
-                <span>{address1}</span>
+                <span>{t(address1)}</span>
               </a>
 
               {/* Adres 2 */}
@@ -128,7 +128,7 @@ const Footer = () => {
                 title="Google Maps’te aç"
               >
                 <MapPin size={16} />
-                <span>{address2}</span>
+                <span>{t(address2)}</span>
               </a>
             </div>
           </div>
