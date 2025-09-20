@@ -1,7 +1,7 @@
 
 import { useParams, Link } from 'react-router-dom';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
-import { ArrowLeft} from 'lucide-react';
+import { ArrowLeft, CheckCircle } from 'lucide-react';
 import ImageGallery from '../components/ImageGallery';
 import { useTranslation } from 'react-i18next';
 
@@ -71,7 +71,7 @@ const ProductDetail = () => {
     }
   ];
 
-  const product = products.find(p => p.slug === (slug ));
+  const product = products.find(p => p.slug === (slug));
 
   if (!product) {
     return (
@@ -104,6 +104,45 @@ const ProductDetail = () => {
     }
   ];
 */}
+
+  // Ürün açıklamasını paragraflar halinde düzenle
+  const formatDescription = (description: string) => {
+    const paragraphs = description.split('\n\n').filter(p => p.trim() !== '');
+
+    return paragraphs.map((paragraph, index) => {
+      // Eğer paragraf tek cümle değilse ve özellikler içeriyorsa
+      if (paragraph.includes('\n') && (paragraph.includes('×') || paragraph.includes('cm') || paragraph.includes('%'))) {
+        const lines = paragraph.split('\n').filter(line => line.trim() !== '');
+        const mainText = lines[0];
+        const features = lines.slice(1);
+
+        return (
+          <div key={index} className="mb-">
+            <p className="text-xl text-gray-700 mb-8 leading-relaxed whitespace-pre-line whitespace-pre-wrap [tab-size:4]">{mainText}</p>
+            {features.length > 0 && (
+              <div className="bg-blue-50 rounded-lg p-4">
+                <ul className="space-y-6">
+                  {features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start space-x-2">
+                      <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700 text-xl">{feature.trim()}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        );
+      } else {
+        // Normal paragraf
+        return (
+          <p key={index} className=" text-xl text-gray-700 mb-8 leading-relaxed whitespace-pre-line whitespace-pre-wrap [tab-size:4]">
+            {paragraph.trim()}
+          </p>
+        );
+      }
+    });
+  };
   return (
     <div className="pt-16 md:pt-20 lg:pt-20">
       {/* Breadcrumb */}
@@ -149,7 +188,8 @@ const ProductDetail = () => {
                 </span>
               </div>*/}
               <h1 className="text-4xl font-bold text-gray-900 mb-4">{t(product.name)}</h1>
-              <p className="text-xl text-gray-600 mb-6 whitespace-pre-line whitespace-pre-wrap [tab-size:4]">{t(product.description)} selam </p>
+              {/*<p className="text-xl text-gray-600 mb-6 whitespace-pre-line whitespace-pre-wrap [tab-size:4]">{t(product.description)} selam </p>
+              */}
               {/*  <p className="text-gray-700 mb-8 leading-relaxed whitespace-pre-line whitespace-pre-wrap [tab-size:4]">{t(product.description)}</p> */}
               {/*
               <div className="mb-8">
@@ -164,6 +204,10 @@ const ProductDetail = () => {
                 </div>
               </div>
 */}
+<div className="prose prose-lg max-w-none mb-8">
+                {formatDescription(t(product.description))}
+              </div>
+
               <div className="bg-gray-50 p-6 rounded-xl mb-8">
                 <p className="text-2xl font-bold text-blue-900 mb-4">{t(product.price)}</p>
                 <Link

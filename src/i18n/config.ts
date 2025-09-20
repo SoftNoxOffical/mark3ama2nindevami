@@ -50,8 +50,8 @@ const resources = {
         ipaCloth: {
           nameUppercase: 'İPA Silme Bezleri',
           name: 'İPA SİLME BEZİ',
-        
-          description: '%100 polyester endüstriyel örme silme bezi. Ultrasonik kesim ile dilimleme yapılmaktadır, kesilen kenarlardan hav bırakma veya iplik atması yapmaz. \n\n20×40, 30×40, 40×40 veya diğer istenilen ebatlarda dilimlenebilir. \nTek taraflı desen, 200 gr/m2. \nYüzeyi çizmez, hav veya lif bırakmaz. \nÜstün hidrofilik özellik, yüksek sıvı emme kapasitesi. \nTüm yüzeyler için uygundur. \nOtomotiv ve boya sanayi hassas yüzey işlemleri için uygundur.',
+
+          description: '%100 polyester endüstriyel örme silme bezi. Ultrasonik kesim ile dilimleme yapılmaktadır, kesilen kenarlardan hav bırakma veya iplik atması yapmaz. \n\n20×40, 30×40, 40×40 veya diğer istenilen ebatlarda dilimlenebilir. \nTek taraflı desen, 200 gr/m². \nYüzeyi çizmez, hav veya lif bırakmaz. \nÜstün hidrofilik özellik, yüksek sıvı emme kapasitesi. \nTüm yüzeyler için uygundur. \nOtomotiv ve boya sanayi hassas yüzey işlemleri için uygundur.',
           features: '✓ Steril üretim ✓ Antibakteriyel özellik ✓ Tek kullanımlık seçenekler',
           specifications: {
             'Malzeme': '100% Pamuk',
@@ -65,8 +65,8 @@ const resources = {
         silkMesh: {
           nameUppercase: 'Boya Süzme Bezleri',
           name: 'Boya Süzme Bezleri',
-        
-          description: 'Boya süzme bezi, hava, su, yağ ve yakıt gibi akışkanların filtresi olarak tekstil, cam, seramik, elektronik, grafik, plastik, gıda, kimya, sağlık, otomotiv ve reklam sektörlerinde kullanılmaktadır. \n\nÜrünlerimiz sektörün en kaliteli özelliklerine sahiptir.  Eşit gözenekli, eşit atkı ve çözgü sayıları vardır.  Ürünümüz yüksek kopma mukavemetli %100 polyester monofilament iplikten üretilmiştir.  25 mikron ve üstü tüm özelliklerde ürün gamı bulunmaktadır. ',
+
+          description: 'Boya süzme bezi, hava, su, yağ ve yakıt gibi akışkanların filtresi olarak tekstil, cam, seramik, elektronik, grafik, plastik, gıda, kimya, sağlık, otomotiv ve reklam sektörlerinde kullanılmaktadır. \nÜrünlerimiz sektörün en kaliteli özelliklerine sahiptir. \nEşit gözenekli, eşit atkı ve çözgü sayıları vardır.  \nÜrünümüz yüksek kopma mukavemetli %100 polyester monofilament iplikten üretilmiştir.  \n25 mikron ve üstü tüm özelliklerde ürün gamı bulunmaktadır. ',
           features: '✓ Yüksek emicilik ✓ Kimyasal direnç ✓ Yıkanabilir ve tekrar kullanılabilir',
           specifications: {
             'Malzeme': 'Sertifikalı Organik Pamuk',
@@ -80,8 +80,8 @@ const resources = {
         microFiber: {
           nameUppercase: 'Mikrofiber Temizlik Bezleri',
           name: 'MİKRO-FİBER BEZ',
-        
-          description: '%80 polyester %20 poliamid ipliğinden üretilmiştir. Kısa hav boyu sayesinde hem kurulama hemde temizleme yapılabilmektedir. Tüm yüzeylerde rahatlıkla kullanılmaktadır. Özel teknoloji boyama ile üretilerek kullanım kalitesi üst seviyede sunulmaktadır.  Mat bir görünüme sahiptir. Kolay temizlenebilir yapısı sayesinde her türlü kirli noktada rahatlıkla kullanılabilir. Talep edilen cinste 40x40cm ebatında üretilmektedir.',
+
+          description: '%80 polyester %20 poliamid ipliğinden üretilmiştir. Tüm yüzeylerde rahatlıkla kullanılmaktadır. Özel teknoloji boyama ile üretilerek kullanım kalitesi üst seviyede sunulmaktadır.  Mat bir görünüme sahiptir. Kolay temizlenebilir yapısı sayesinde her türlü kirli noktada rahatlıkla kullanılabilir. \nTalep edilen cinste 40x40cm ebatında üretilmektedir. \nKısa hav boyu sayesinde hem kurulama hemde temizleme yapılabilmektedir.',
           features: '✓ Organik malzemeler ✓ Özel desenler ✓ Renk haslığı garantisi',
           specifications: {
             'Baskı Tipi': 'Dijital Sublimation',
@@ -95,8 +95,8 @@ const resources = {
         bandocuGlove: {
           nameUppercase: 'Bandocu Eldivenleri',
           name: 'BANDOCU ELDİVENİ',
-     
-          description: '%100 Polyester \nHav ve iz bırakmayan minimum dikişle tasarlanmış eldivendir.\nHassas çalışmalarda kullanılmak üzere tasarlanmıştır. Ürün koruma amaçlıdır. İnce, elastik kumaşı sayesinde eli tam olarak kavrar, üst düzeyde hassasiyet sağlar. ',
+
+          description: '%100 Polyester \nHav ve iz bırakmayan minimum dikişle tasarlanmış eldivendir.\nHassas çalışmalarda kullanılmak üzere tasarlanmıştır. \nÜrün koruma amaçlıdır. \nİnce, elastik kumaşı sayesinde eli tam olarak kavrar, üst düzeyde hassasiyet sağlar. ',
           features: '✓ Leke direnci ✓ Sık yıkamaya dayanıklı ✓ Profesyonel görünüm',
           specifications: {
             'Kullanım Alanı': 'Ev İçi',
@@ -368,9 +368,9 @@ const resources = {
           nameUppercase: 'Paint Filtering Cloths',
           name: 'PAINT FILTERING CLOTH',
           description:
-            'Used as a filter for air, water, oil and fuel, this cloth serves the textile, glass, ceramic, electronics, graphics, plastic, food, chemical, healthcare, automotive and advertising industries.\n\n' +
-            'Our products meet the highest standards in the field. They feature uniform pores with consistent warp and weft counts. ' +
-            'Made from high tensile-strength 100% polyester monofilament yarn. Available from 25 microns and above.',
+            'Used as a filter for air, water, oil and fuel, this cloth serves the textile, glass, ceramic, electronics, graphics, plastic, food, chemical, healthcare, automotive and advertising industries.' +
+            '\nOur products meet the highest standards in the field. \nThey feature uniform pores with consistent warp and weft counts. ' +
+            '\nMade from high tensile-strength 100% polyester monofilament yarn. \nAvailable from 25 microns and above.',
           features: '✓ High absorbency ✓ Chemical resistance ✓ Washable and reusable',
           specifications: {
             'Malzeme': 'Certified Organic Cotton',
@@ -385,9 +385,9 @@ const resources = {
           nameUppercase: 'Microfiber Cleaning Cloths',
           name: 'MICROFIBER CLOTH',
           description:
-            'Made of 80% polyester and 20% polyamide yarn. Thanks to its short pile height, it can both dry and clean. ' +
+            'Made of 80% polyester and 20% polyamide yarn. ' +
             'Comfortably usable on all surfaces. Dyed with special technology for premium finish quality. Has a matte appearance. ' +
-            'Its easy-to-clean structure makes it suitable for all kinds of dirty spots. Produced in 40×40 cm or requested sizes.',
+            'Its easy-to-clean structure makes it suitable for all kinds of dirty spots.' + '\nProduced in 40×40 cm or requested sizes.' + '\nThanks to its short pile height, it can both dry and clean. ',
           features: '✓ Organic materials ✓ Custom patterns ✓ Guaranteed color fastness',
           specifications: {
             'Baskı Tipi': 'Digital Sublimation',
@@ -402,8 +402,8 @@ const resources = {
           nameUppercase: 'Band Gloves',
           name: 'BAND GLOVE',
           description:
-            '100% polyester.\nDesigned with minimal seams to avoid lint and marks.\nMade for precision work and product protection. ' +
-            'Its thin, elastic fabric wraps the hand, delivering an excellent fit and high sensitivity.',
+            '100% polyester.\nDesigned with minimal seams to avoid lint and marks.\nIt is designed to be used in precision work.' + '\nThe product is for protection purposes.'+
+            '\nIts thin, elastic fabric wraps the hand, delivering an excellent fit and high sensitivity.',
           features: '✓ Stain resistance ✓ Withstands frequent washing ✓ Professional appearance',
           specifications: {
             'Kullanım Alanı': 'Indoor Use',
@@ -674,9 +674,11 @@ const resources = {
           nameUppercase: 'Farbfilter-Tücher',
           name: 'FARBFILTER-TUCH',
           description:
-            'Als Filter für Luft, Wasser, Öl und Kraftstoff in den Branchen Textil, Glas, Keramik, Elektronik, Grafik, Kunststoff, Lebensmittel, Chemie, Gesundheit, Automobil und Werbung im Einsatz.\n\n' +
-            'Unsere Produkte entsprechen den höchsten Branchenstandards: gleichmäßige Poren sowie konstante Kett- und Schusszahlen. ' +
-            'Gefertigt aus hochzugfestem 100 % Polyester-Monofilamentgarn. Verfügbar ab 25 µm und darüber.',
+            'Als Filter für Luft, Wasser, Öl und Kraftstoff in den Branchen Textil, Glas, Keramik, Elektronik, Grafik, Kunststoff, Lebensmittel, Chemie, Gesundheit, Automobil und Werbung im Einsatz.' +
+            '\nUnsere Produkte entsprechen den höchsten Branchenstandards ' + 
+            '\nGleichmäßige Poren sowie konstante Kett- und Schusszahlen. ' +
+            '\nGefertigt aus hochzugfestem 100 % Polyester-Monofilamentgarn. '+
+            '\nVerfügbar ab 25 µm und darüber.',
           features: '✓ Hohe Saugfähigkeit ✓ Chemikalienbeständig ✓ Waschbar & wiederverwendbar',
           specifications: {
             'Material': 'Zertifizierte Bio-Baumwolle',
@@ -691,9 +693,10 @@ const resources = {
           nameUppercase: 'Mikrofaser-Reinigungstücher',
           name: 'MIKROFASER-TUCH',
           description:
-            'Aus 80 % Polyester und 20 % Polyamidgarn hergestellt. Dank der kurzen Florhöhe zum Trocknen und Reinigen geeignet. ' +
+            'Aus 80 % Polyester und 20 % Polyamidgarn hergestellt.' +
             'Auf allen Oberflächen bequem einsetzbar. Durch spezielle Färbetechnologie mit erstklassiger Verarbeitungsqualität. ' +
-            'Matte Optik. Die leicht zu reinigende Struktur macht es für verschiedenste Verschmutzungen geeignet. Standardmäßig 40×40 cm oder nach Wunsch.',
+            'Matte Optik. Die leicht zu reinigende Struktur macht es für verschiedenste Verschmutzungen geeignet.'+ '\nStandardmäßig 40×40 cm oder nach Wunsch.'+
+            '\nDank der kurzen Florhöhe zum Trocknen und Reinigen geeignet. ',
           features: '✓ Organische Materialien ✓ Individuelle Muster ✓ Farbechtheitsgarantie',
           specifications: {
             'Druckart': 'Digitale Sublimation',
@@ -708,8 +711,11 @@ const resources = {
           nameUppercase: 'Band-Handschuhe',
           name: 'BAND-HANDSCHUH',
           description:
-            '100 % Polyester.\nMit minimalen Nähten konzipiert, damit weder Fusseln noch Spuren entstehen.\nFür präzise Arbeiten entwickelt – dient dem Produktschutz. ' +
-            'Das dünne, elastische Gewebe schmiegt sich an die Hand an und bietet hohe Sensibilität.',
+            '100 % Polyester.'+
+            '\nMit minimalen Nähten konzipiert, damit weder Fusseln noch Spuren entstehen.'+
+            '\nFür präzise Arbeiten entwickelt.' +
+            '\nDas Produkt dient Schutzzwecken.'+
+            '\nDas dünne, elastische Gewebe schmiegt sich an die Hand an und bietet hohe Sensibilität.',
           features: '✓ Fleckenresistent ✓ Waschfest ✓ Professionelles Erscheinungsbild',
           specifications: {
             'Einsatzbereich': 'Innenbereich',
