@@ -50,7 +50,8 @@ const resources = {
         ipaCloth: {
           nameUppercase: 'İPA Silme Bezleri',
           name: 'İPA SİLME BEZİ',
-          description: '%100 polyester endüstriyel örme silme bezi. Ultrasonik kesim ile dilimleme yapılmaktadır, kesilen kenarlardan hav bırakma veya iplik atması yapmaz. \n\n20×40, 30×40, 40×40 veya diğer istenilen ebatlarda dilimlenebilir. \nTek taraflı desen, 200 gr/m². \nYüzeyi çizmez, hav veya lif bırakmaz. \nÜstün hidrofilik özellik, yüksek sıvı emme kapasitesi. \nTüm yüzeyler için uygundur. \nOtomotiv ve boya sanayi hassas yüzey işlemleri için uygundur.',
+        
+          description: '%100 polyester endüstriyel örme silme bezi. Ultrasonik kesim ile dilimleme yapılmaktadır, kesilen kenarlardan hav bırakma veya iplik atması yapmaz. \n\n20×40, 30×40, 40×40 veya diğer istenilen ebatlarda dilimlenebilir. \nTek taraflı desen, 200 gr/m2. \nYüzeyi çizmez, hav veya lif bırakmaz. \nÜstün hidrofilik özellik, yüksek sıvı emme kapasitesi. \nTüm yüzeyler için uygundur. \nOtomotiv ve boya sanayi hassas yüzey işlemleri için uygundur.',
           features: '✓ Steril üretim ✓ Antibakteriyel özellik ✓ Tek kullanımlık seçenekler',
           specifications: {
             'Malzeme': '100% Pamuk',
@@ -63,7 +64,8 @@ const resources = {
         },
         silkMesh: {
           nameUppercase: 'Boya Süzme Bezleri',
-          name: 'BOYA SÜZME BEZİ',
+          name: 'Boya Süzme Bezleri',
+        
           description: 'Boya süzme bezi, hava, su, yağ ve yakıt gibi akışkanların filtresi olarak tekstil, cam, seramik, elektronik, grafik, plastik, gıda, kimya, sağlık, otomotiv ve reklam sektörlerinde kullanılmaktadır. \n\nÜrünlerimiz sektörün en kaliteli özelliklerine sahiptir.  Eşit gözenekli, eşit atkı ve çözgü sayıları vardır.  Ürünümüz yüksek kopma mukavemetli %100 polyester monofilament iplikten üretilmiştir.  25 mikron ve üstü tüm özelliklerde ürün gamı bulunmaktadır. ',
           features: '✓ Yüksek emicilik ✓ Kimyasal direnç ✓ Yıkanabilir ve tekrar kullanılabilir',
           specifications: {
@@ -78,6 +80,7 @@ const resources = {
         microFiber: {
           nameUppercase: 'Mikrofiber Temizlik Bezleri',
           name: 'MİKRO-FİBER BEZ',
+        
           description: '%80 polyester %20 poliamid ipliğinden üretilmiştir. Kısa hav boyu sayesinde hem kurulama hemde temizleme yapılabilmektedir. Tüm yüzeylerde rahatlıkla kullanılmaktadır. Özel teknoloji boyama ile üretilerek kullanım kalitesi üst seviyede sunulmaktadır.  Mat bir görünüme sahiptir. Kolay temizlenebilir yapısı sayesinde her türlü kirli noktada rahatlıkla kullanılabilir. Talep edilen cinste 40x40cm ebatında üretilmektedir.',
           features: '✓ Organik malzemeler ✓ Özel desenler ✓ Renk haslığı garantisi',
           specifications: {
@@ -92,6 +95,7 @@ const resources = {
         bandocuGlove: {
           nameUppercase: 'Bandocu Eldivenleri',
           name: 'BANDOCU ELDİVENİ',
+     
           description: '%100 Polyester \nHav ve iz bırakmayan minimum dikişle tasarlanmış eldivendir.\nHassas çalışmalarda kullanılmak üzere tasarlanmıştır. Ürün koruma amaçlıdır. İnce, elastik kumaşı sayesinde eli tam olarak kavrar, üst düzeyde hassasiyet sağlar. ',
           features: '✓ Leke direnci ✓ Sık yıkamaya dayanıklı ✓ Profesyonel görünüm',
           specifications: {
@@ -210,7 +214,7 @@ const resources = {
         relatedProductsSubtitle: 'Diğer kaliteli bez ürünlerimizi keşfedin',
         getQuote: 'Fiyat Teklifi Al',
         viewDetails: 'Detayları Gör →',
-        seeAll:'Tüm Ürün Kataloğunu İncele',
+        seeAll: 'Tüm Ürün Kataloğunu İncele',
         benefits: {
           delivery: {
             title: 'Hızlı Teslimat',
@@ -516,7 +520,7 @@ const resources = {
         relatedProductsSubtitle: 'Discover our other high-quality cloth products',
         getQuote: 'Get a Price Quote',
         viewDetails: 'View Details →',
-        seeAll:'View the Entire Product Catalogue',
+        seeAll: 'View the Entire Product Catalogue',
         benefits: {
           delivery: {
             title: 'Fast Delivery',
@@ -601,311 +605,311 @@ const resources = {
     }
   },
   de: {
-  translation: {
-    // Navigation
-    nav: {
-      home: 'Startseite',
-      products: 'Unsere Produkte',
-      about: 'Über uns',
-      contact: 'Kontakt',
-      quote: 'Angebot anfordern'
-    },
-    whatsapp: {
-      tooltip: 'Über WhatsApp kontaktieren',
-      message: ' '
-    },
-    // Home page
-    home: {
-      heroTitle: 'Technische Textilien für die Automobilindustrie',
-      heroSubtitle: 'Produkte',
-      heroDescription: 'Wir produzieren mit hochwertigen Rohstoffen',
-      heroButton: 'Zum Produktkatalog',
-      productsTitle: 'Unsere Produktkollektion',
-      productsSubtitle: '',
-      featuresTitle: 'Warum uns wählen?',
-      featuresSubtitle: 'Wir bieten hochwertigen Service und verlässliche Lösungen',
-      viewAllProducts: 'Alle Produkte ansehen',
-      productTypesTitle: 'Unsere Produktarten und Einsatzbereiche',
-      productTypesSubtitle: 'Jedes unserer Produkte ist auf spezielle Anforderungen ausgelegt.',
-      specialNeedsTitle: 'Suchen Sie eine Lösung für Ihre speziellen Anforderungen?',
-      specialNeedsDescription: 'Unabhängig von Ihrer Branche fertigen wir maßgeschneiderte Produkte. Kontaktieren Sie uns für Details.',
-      contactButton: 'Angebot einholen'
-    },
-    // Products
-    products: {
-      title: 'Sonderfertigung',
-      subtitle: 'Entdecken Sie unsere hochwertige und vielseitige Tuch-Kollektion',
-      collectionTitle: 'Unsere Produktkollektion',
-      collectionSubtitle: 'Finden Sie die passenden Tücher für Ihre Anforderungen',
-      specialProductionTitle: 'Anfrage für Sonderfertigung',
-      specialProductionDescription: 'Sonderanfertigung nach Ihren Bedürfnissen. Kontaktieren Sie uns!',
-      ctaDescription: 'Wir fertigen speziell nach Ihren Anforderungen. Nehmen Sie Kontakt auf!',
-      contactUs: 'Kontakt aufnehmen',
-      features: 'Eigenschaften:',
-      detail: 'Detail',
-      priceContact: 'Preis auf Anfrage',
-      dowloadPDF: 'Katalog herunterladen',
-      ipaCloth: {
-        nameUppercase: 'IPA-Wischtücher',
-        name: 'IPA-WISCHTUCH',
-        description:
-          '100 % Polyester, industriell gestricktes Wischtuch. Mit Ultraschallschnitt zugeschnitten – die Schnittkanten fusseln nicht und es lösen sich keine Fäden.\n\n' +
-          'Kann in 20×40, 30×40, 40×40 cm oder in beliebigen Wunschmaßen geschnitten werden.\n' +
-          'Einseitiges Muster, 200 g/m².\n' +
-          'Kratzt Oberflächen nicht; hinterlässt weder Fusseln noch Fasern.\n' +
-          'Ausgezeichnet hydrophile Eigenschaften mit hoher Flüssigkeitsaufnahme.\n' +
-          'Für alle Oberflächen geeignet.\n' +
-          'Ideal für empfindliche Oberflächenarbeiten in der Automobil- und Lackindustrie.',
-        features: '✓ Sterile Fertigung ✓ Antibakterielle Eigenschaften ✓ Einweg-Optionen',
-        specifications: {
-          'Material': '100 % Baumwolle',
-          'Webart': 'Spezialgewebe',
-          'Flächengewicht': '200–300 g/m²',
-          'Farbauswahl': '15+ Farben',
-          'Abmessungen': 'Sondermaße möglich',
-          'Pflege': 'Maschinenwaschbar'
+    translation: {
+      // Navigation
+      nav: {
+        home: 'Startseite',
+        products: 'Unsere Produkte',
+        about: 'Über uns',
+        contact: 'Kontakt',
+        quote: 'Angebot anfordern'
+      },
+      whatsapp: {
+        tooltip: 'Über WhatsApp kontaktieren',
+        message: ' '
+      },
+      // Home page
+      home: {
+        heroTitle: 'Technische Textilien für die Automobilindustrie',
+        heroSubtitle: 'Produkte',
+        heroDescription: 'Wir produzieren mit hochwertigen Rohstoffen',
+        heroButton: 'Zum Produktkatalog',
+        productsTitle: 'Unsere Produktkollektion',
+        productsSubtitle: '',
+        featuresTitle: 'Warum uns wählen?',
+        featuresSubtitle: 'Wir bieten hochwertigen Service und verlässliche Lösungen',
+        viewAllProducts: 'Alle Produkte ansehen',
+        productTypesTitle: 'Unsere Produktarten und Einsatzbereiche',
+        productTypesSubtitle: 'Jedes unserer Produkte ist auf spezielle Anforderungen ausgelegt.',
+        specialNeedsTitle: 'Suchen Sie eine Lösung für Ihre speziellen Anforderungen?',
+        specialNeedsDescription: 'Unabhängig von Ihrer Branche fertigen wir maßgeschneiderte Produkte. Kontaktieren Sie uns für Details.',
+        contactButton: 'Angebot einholen'
+      },
+      // Products
+      products: {
+        title: 'Sonderfertigung',
+        subtitle: 'Entdecken Sie unsere hochwertige und vielseitige Tuch-Kollektion',
+        collectionTitle: 'Unsere Produktkollektion',
+        collectionSubtitle: 'Finden Sie die passenden Tücher für Ihre Anforderungen',
+        specialProductionTitle: 'Anfrage für Sonderfertigung',
+        specialProductionDescription: 'Sonderanfertigung nach Ihren Bedürfnissen. Kontaktieren Sie uns!',
+        ctaDescription: 'Wir fertigen speziell nach Ihren Anforderungen. Nehmen Sie Kontakt auf!',
+        contactUs: 'Kontakt aufnehmen',
+        features: 'Eigenschaften:',
+        detail: 'Detail',
+        priceContact: 'Preis auf Anfrage',
+        dowloadPDF: 'Katalog herunterladen',
+        ipaCloth: {
+          nameUppercase: 'IPA-Wischtücher',
+          name: 'IPA-WISCHTUCH',
+          description:
+            '100 % Polyester, industriell gestricktes Wischtuch. Mit Ultraschallschnitt zugeschnitten – die Schnittkanten fusseln nicht und es lösen sich keine Fäden.\n\n' +
+            'Kann in 20×40, 30×40, 40×40 cm oder in beliebigen Wunschmaßen geschnitten werden.\n' +
+            'Einseitiges Muster, 200 g/m².\n' +
+            'Kratzt Oberflächen nicht; hinterlässt weder Fusseln noch Fasern.\n' +
+            'Ausgezeichnet hydrophile Eigenschaften mit hoher Flüssigkeitsaufnahme.\n' +
+            'Für alle Oberflächen geeignet.\n' +
+            'Ideal für empfindliche Oberflächenarbeiten in der Automobil- und Lackindustrie.',
+          features: '✓ Sterile Fertigung ✓ Antibakterielle Eigenschaften ✓ Einweg-Optionen',
+          specifications: {
+            'Material': '100 % Baumwolle',
+            'Webart': 'Spezialgewebe',
+            'Flächengewicht': '200–300 g/m²',
+            'Farbauswahl': '15+ Farben',
+            'Abmessungen': 'Sondermaße möglich',
+            'Pflege': 'Maschinenwaschbar'
+          }
+        },
+        silkMesh: {
+          nameUppercase: 'Farbfilter-Tücher',
+          name: 'FARBFILTER-TUCH',
+          description:
+            'Als Filter für Luft, Wasser, Öl und Kraftstoff in den Branchen Textil, Glas, Keramik, Elektronik, Grafik, Kunststoff, Lebensmittel, Chemie, Gesundheit, Automobil und Werbung im Einsatz.\n\n' +
+            'Unsere Produkte entsprechen den höchsten Branchenstandards: gleichmäßige Poren sowie konstante Kett- und Schusszahlen. ' +
+            'Gefertigt aus hochzugfestem 100 % Polyester-Monofilamentgarn. Verfügbar ab 25 µm und darüber.',
+          features: '✓ Hohe Saugfähigkeit ✓ Chemikalienbeständig ✓ Waschbar & wiederverwendbar',
+          specifications: {
+            'Material': 'Zertifizierte Bio-Baumwolle',
+            'Zertifikat': 'GOTS-zertifiziert',
+            'Farbstoffe': 'Pflanzliche Naturfarbstoffe',
+            'Flächengewicht': '180–250 g/m²',
+            'Besonderheit': 'Hypoallergen',
+            'Ökobilanz': 'Klimaneutrale Produktion'
+          }
+        },
+        microFiber: {
+          nameUppercase: 'Mikrofaser-Reinigungstücher',
+          name: 'MIKROFASER-TUCH',
+          description:
+            'Aus 80 % Polyester und 20 % Polyamidgarn hergestellt. Dank der kurzen Florhöhe zum Trocknen und Reinigen geeignet. ' +
+            'Auf allen Oberflächen bequem einsetzbar. Durch spezielle Färbetechnologie mit erstklassiger Verarbeitungsqualität. ' +
+            'Matte Optik. Die leicht zu reinigende Struktur macht es für verschiedenste Verschmutzungen geeignet. Standardmäßig 40×40 cm oder nach Wunsch.',
+          features: '✓ Organische Materialien ✓ Individuelle Muster ✓ Farbechtheitsgarantie',
+          specifications: {
+            'Druckart': 'Digitale Sublimation',
+            'Farbqualität': 'Full-HD-Auflösung',
+            'Mindestbestellmenge': '50 Stück',
+            'Produktionszeit': '7–10 Werktage',
+            'Designsupport': 'Kostenloses Design',
+            'Dateiformat': 'AI, PSD, PDF'
+          }
+        },
+        bandocuGlove: {
+          nameUppercase: 'Band-Handschuhe',
+          name: 'BAND-HANDSCHUH',
+          description:
+            '100 % Polyester.\nMit minimalen Nähten konzipiert, damit weder Fusseln noch Spuren entstehen.\nFür präzise Arbeiten entwickelt – dient dem Produktschutz. ' +
+            'Das dünne, elastische Gewebe schmiegt sich an die Hand an und bietet hohe Sensibilität.',
+          features: '✓ Fleckenresistent ✓ Waschfest ✓ Professionelles Erscheinungsbild',
+          specifications: {
+            'Einsatzbereich': 'Innenbereich',
+            'Material': 'Baumwoll-Polyester-Mischung',
+            'Pflege': 'Maschinenwaschbar bei 40 °C',
+            'Bügeln': 'Mittlere Hitze',
+            'Varianten': 'Vorhang, Decke, Kissen',
+            'Farbechtheit': 'Hoch'
+          }
         }
       },
-      silkMesh: {
-        nameUppercase: 'Farbfilter-Tücher',
-        name: 'FARBFILTER-TUCH',
-        description:
-          'Als Filter für Luft, Wasser, Öl und Kraftstoff in den Branchen Textil, Glas, Keramik, Elektronik, Grafik, Kunststoff, Lebensmittel, Chemie, Gesundheit, Automobil und Werbung im Einsatz.\n\n' +
-          'Unsere Produkte entsprechen den höchsten Branchenstandards: gleichmäßige Poren sowie konstante Kett- und Schusszahlen. ' +
-          'Gefertigt aus hochzugfestem 100 % Polyester-Monofilamentgarn. Verfügbar ab 25 µm und darüber.',
-        features: '✓ Hohe Saugfähigkeit ✓ Chemikalienbeständig ✓ Waschbar & wiederverwendbar',
-        specifications: {
-          'Material': 'Zertifizierte Bio-Baumwolle',
-          'Zertifikat': 'GOTS-zertifiziert',
-          'Farbstoffe': 'Pflanzliche Naturfarbstoffe',
-          'Flächengewicht': '180–250 g/m²',
-          'Besonderheit': 'Hypoallergen',
-          'Ökobilanz': 'Klimaneutrale Produktion'
+      // About page
+      about: {
+        title: 'Über uns',
+        subtitle: 'Mit über 10 Jahren Erfahrung führend in der Sonderfertigung von Wischtüchern',
+        storyTitle: 'Unsere Geschichte',
+        storyDescriptionHtml:
+          'Als Vonza Tekstil Otomotiv San. ve Tic. Ltd. Şti. beliefern wir seit <strong>2013</strong> Lackierereien der Automobilzulieferindustrie mit hochwertigen technischen Textilprodukten – mit einem erfahrenen Team.',
+        mainProducts: 'Unsere Hauptproduktgruppen',
+        storyConclusion:
+          'Unsere Produkte haben sich in Qualität und Funktionalität bewährt; sie bieten Lösungen, die Ihre Produktionsprozesse vereinfachen und Ihre Effizienz steigern.',
+        valuesTitle: 'Unsere Werte',
+        valuesSubtitle: 'Grundwerte, die unseren Geschäftsansatz prägen',
+        values: {
+          quality: {
+            title: 'Qualität',
+            description: 'Wir produzieren nach höchsten Standards, um Qualitätsprodukte zu liefern.'
+          },
+          satisfaction: {
+            title: 'Kundenzufriedenheit',
+            description: 'Kundenzufriedenheit hat Priorität – wir streben in jedem Projekt nach Exzellenz.'
+          },
+          capacity: {
+            title: 'Produktionskapazität',
+            description: 'Mit unserer modernen Anlage produzieren wir in hoher Kapazität.'
+          },
+          sustainability: {
+            title: 'Nachhaltigkeit',
+            description: 'Mit umweltfreundlichen Verfahren handeln wir naturbewusst.'
+          }
+        },
+        stats: {
+          experience: 'Jahre Erfahrung',
+          customers: 'Unternehmens-Referenzen',
+          products: 'Tägliche Produktionskapazität',
+          support: 'Support-Service'
+        },
+        ctaTitle: 'Anfrage für Sonderfertigung',
+        ctaDescription: 'Wir fertigen Tücher nach Ihren Anforderungen. Kontaktieren Sie uns!',
+        ctaButton: 'Kontakt aufnehmen'
+      },
+      // Contact page
+      contact: {
+        title: 'Kontakt',
+        subtitle: 'Kontaktieren Sie uns – wir helfen Ihnen gern',
+        infoTitle: 'Unsere Kontaktdaten',
+        infoSubtitle: 'Für Fragen können Sie uns jederzeit erreichen',
+        formTitle: 'Kontakt aufnehmen',
+        formSubtitle: 'Füllen Sie das Formular aus, um uns zu schreiben',
+        coppiedEmail: 'E-Mail-Adresse kopiert',
+        centralAddress: 'Zentrale',
+        factoryAddress: 'Fabrik',
+        phone: 'Telefon',
+        email: 'E-Mail',
+        coppy: 'Kopieren',
+        coppied: 'Kopiert!',
+        coppyButtonHover: 'E-Mail kopieren',
+        form: {
+          name: 'Vollständiger Name *',
+          namePlaceholder: 'Geben Sie Ihren Vor- und Nachnamen ein',
+          company: 'Firmenname',
+          companyPlaceholder: 'Geben Sie Ihren Firmennamen ein',
+          email: 'E-Mail *',
+          emailPlaceholder: 'Geben Sie Ihre E-Mail-Adresse ein',
+          phone: 'Telefon *',
+          phonePlaceholder: 'Geben Sie Ihre Telefonnummer ein',
+          country: 'Land',
+          countryPlaceholder: 'Geben Sie Ihr Land ein',
+          location: 'Standort',
+          locationPlaceholder: 'Stadt/Bezirk eingeben',
+          message: 'Nachricht *',
+          messagePlaceholder: 'Schreiben Sie Ihre Nachricht…',
+          submit: 'Nachricht senden',
+          required: '*'
+        },
+        info: {
+          phone: {
+            title: 'Telefon',
+            details: ['+90 212 123 45 67', '+90 532 123 45 67']
+          },
+          email: {
+            title: 'E-Mail',
+            details: ['info@bezpro.com', 'satis@bezpro.com']
+          },
+          address: {
+            title: 'Adresse',
+            details: ['Merkez Mah. Tekstil Cad. No:123', 'Şişli / Istanbul / Türkei']
+          },
+          hours: {
+            title: 'Öffnungszeiten',
+            details: ['Montag – Freitag: 08:00 – 18:00', 'Samstag: 09:00 – 15:00']
+          }
+        },
+        mapTitle: 'Kartenstandort',
+        mapLocation: 'Şişli / Istanbul'
+      },
+      // Product Detail page
+      productDetail: {
+        backToProducts: 'Zurück zu den Produkten',
+        features: 'Eigenschaften',
+        specifications: 'Technische Spezifikationen',
+        advantages: 'Vorteile',
+        relatedProducts: 'Ähnliche Produkte',
+        relatedProductsSubtitle: 'Entdecken Sie weitere hochwertige Tuch-Produkte',
+        getQuote: 'Preisangebot einholen',
+        viewDetails: 'Details anzeigen →',
+        seeAll: 'Den gesamten Produktkatalog anzeigen',
+        benefits: {
+          delivery: {
+            title: 'Schnelle Lieferung',
+            description: 'Schnelle und sichere Lieferung in der gesamten Türkei'
+          },
+          quality: {
+            title: 'Qualitätsgarantie',
+            description: 'Qualitätsgarantie für all unsere Produkte'
+          },
+          support: {
+            title: 'Experten-Support',
+            description: 'Professionelle Unterstützung mit 15 Jahren Erfahrung'
+          }
         }
       },
-      microFiber: {
-        nameUppercase: 'Mikrofaser-Reinigungstücher',
-        name: 'MIKROFASER-TUCH',
-        description:
-          'Aus 80 % Polyester und 20 % Polyamidgarn hergestellt. Dank der kurzen Florhöhe zum Trocknen und Reinigen geeignet. ' +
-          'Auf allen Oberflächen bequem einsetzbar. Durch spezielle Färbetechnologie mit erstklassiger Verarbeitungsqualität. ' +
-          'Matte Optik. Die leicht zu reinigende Struktur macht es für verschiedenste Verschmutzungen geeignet. Standardmäßig 40×40 cm oder nach Wunsch.',
-        features: '✓ Organische Materialien ✓ Individuelle Muster ✓ Farbechtheitsgarantie',
-        specifications: {
-          'Druckart': 'Digitale Sublimation',
-          'Farbqualität': 'Full-HD-Auflösung',
-          'Mindestbestellmenge': '50 Stück',
-          'Produktionszeit': '7–10 Werktage',
-          'Designsupport': 'Kostenloses Design',
-          'Dateiformat': 'AI, PSD, PDF'
-        }
+      // Quote page
+      quote: {
+        title: 'Angebotsanfrage-Formular',
+        subtitle: 'Füllen Sie das Formular aus, um ein auf Ihre Bedürfnisse zugeschnittenes Angebot zu erhalten',
+        formButton: 'Angebotsformular',
+        description: 'Fordern Sie ein Angebot für maßgefertigte Tuch-Produkte über das Formular an.',
+        benefitsTitle: 'Vorteile der Angebotsanfrage',
+        back: 'Wir melden uns schnellstmöglich bei Ihnen.',
+        benefits: [
+          'Kostenlose Angebotserstellung',
+          'Antwort innerhalb von 24 Stunden',
+          'Individuelle Designoptionen',
+          'Großbestellungen',
+          'Qualitätsgarantie',
+          'Schnelle Lieferung'
+        ],
+        sended_form_title: 'Ihre Nachricht wurde erfolgreich gesendet!',
+        sending: 'Wird gesendet',
+        sended: 'Erfolgreich gesendet!',
+        form: {
+          phonePlaceholder: '+90 530 830 34 22',
+          countryPlaceholder: 'Türkei',
+          locationPlaceholder: 'Istanbul',
+          submit: 'Nachricht senden',
+          required: '*'
+        },
+        quickContact: 'Schnellkontakt',
+        quickContactDescription: 'Für dringende Fälle können Sie uns direkt kontaktieren.',
+        openInNewTab: 'Formular in neuem Tab öffnen',
+        fillForm: 'Formular ausfüllen – wir setzen uns mit Ihnen in Verbindung',
+        loading: 'Lädt …'
       },
-      bandocuGlove: {
-        nameUppercase: 'Band-Handschuhe',
-        name: 'BAND-HANDSCHUH',
-        description:
-          '100 % Polyester.\nMit minimalen Nähten konzipiert, damit weder Fusseln noch Spuren entstehen.\nFür präzise Arbeiten entwickelt – dient dem Produktschutz. ' +
-          'Das dünne, elastische Gewebe schmiegt sich an die Hand an und bietet hohe Sensibilität.',
-        features: '✓ Fleckenresistent ✓ Waschfest ✓ Professionelles Erscheinungsbild',
-        specifications: {
-          'Einsatzbereich': 'Innenbereich',
-          'Material': 'Baumwoll-Polyester-Mischung',
-          'Pflege': 'Maschinenwaschbar bei 40 °C',
-          'Bügeln': 'Mittlere Hitze',
-          'Varianten': 'Vorhang, Decke, Kissen',
-          'Farbechtheit': 'Hoch'
-        }
-      }
-    },
-    // About page
-    about: {
-      title: 'Über uns',
-      subtitle: 'Mit über 10 Jahren Erfahrung führend in der Sonderfertigung von Wischtüchern',
-      storyTitle: 'Unsere Geschichte',
-      storyDescriptionHtml:
-        'Als Vonza Tekstil Otomotiv San. ve Tic. Ltd. Şti. beliefern wir seit <strong>2013</strong> Lackierereien der Automobilzulieferindustrie mit hochwertigen technischen Textilprodukten – mit einem erfahrenen Team.',
-      mainProducts: 'Unsere Hauptproduktgruppen',
-      storyConclusion:
-        'Unsere Produkte haben sich in Qualität und Funktionalität bewährt; sie bieten Lösungen, die Ihre Produktionsprozesse vereinfachen und Ihre Effizienz steigern.',
-      valuesTitle: 'Unsere Werte',
-      valuesSubtitle: 'Grundwerte, die unseren Geschäftsansatz prägen',
-      values: {
+      // Features
+      features: {
         quality: {
-          title: 'Qualität',
-          description: 'Wir produzieren nach höchsten Standards, um Qualitätsprodukte zu liefern.'
+          title: 'Qualitätsproduktion',
+          description: 'Wir arbeiten mit Rohstoffen höchster Qualität.'
         },
-        satisfaction: {
-          title: 'Kundenzufriedenheit',
-          description: 'Kundenzufriedenheit hat Priorität – wir streben in jedem Projekt nach Exzellenz.'
+        design: {
+          title: 'Individuelles Design',
+          description: 'Design und Produktion nach Kundenanforderungen.'
         },
-        capacity: {
-          title: 'Produktionskapazität',
-          description: 'Mit unserer modernen Anlage produzieren wir in hoher Kapazität.'
-        },
-        sustainability: {
-          title: 'Nachhaltigkeit',
-          description: 'Mit umweltfreundlichen Verfahren handeln wir naturbewusst.'
-        }
-      },
-      stats: {
-        experience: 'Jahre Erfahrung',
-        customers: 'Unternehmens-Referenzen',
-        products: 'Tägliche Produktionskapazität',
-        support: 'Support-Service'
-      },
-      ctaTitle: 'Anfrage für Sonderfertigung',
-      ctaDescription: 'Wir fertigen Tücher nach Ihren Anforderungen. Kontaktieren Sie uns!',
-      ctaButton: 'Kontakt aufnehmen'
-    },
-    // Contact page
-    contact: {
-      title: 'Kontakt',
-      subtitle: 'Kontaktieren Sie uns – wir helfen Ihnen gern',
-      infoTitle: 'Unsere Kontaktdaten',
-      infoSubtitle: 'Für Fragen können Sie uns jederzeit erreichen',
-      formTitle: 'Kontakt aufnehmen',
-      formSubtitle: 'Füllen Sie das Formular aus, um uns zu schreiben',
-      coppiedEmail: 'E-Mail-Adresse kopiert',
-      centralAddress: 'Zentrale',
-      factoryAddress: 'Fabrik',
-      phone: 'Telefon',
-      email: 'E-Mail',
-      coppy: 'Kopieren',
-      coppied: 'Kopiert!',
-      coppyButtonHover: 'E-Mail kopieren',
-      form: {
-        name: 'Vollständiger Name *',
-        namePlaceholder: 'Geben Sie Ihren Vor- und Nachnamen ein',
-        company: 'Firmenname',
-        companyPlaceholder: 'Geben Sie Ihren Firmennamen ein',
-        email: 'E-Mail *',
-        emailPlaceholder: 'Geben Sie Ihre E-Mail-Adresse ein',
-        phone: 'Telefon *',
-        phonePlaceholder: 'Geben Sie Ihre Telefonnummer ein',
-        country: 'Land',
-        countryPlaceholder: 'Geben Sie Ihr Land ein',
-        location: 'Standort',
-        locationPlaceholder: 'Stadt/Bezirk eingeben',
-        message: 'Nachricht *',
-        messagePlaceholder: 'Schreiben Sie Ihre Nachricht…',
-        submit: 'Nachricht senden',
-        required: '*'
-      },
-      info: {
-        phone: {
-          title: 'Telefon',
-          details: ['+90 212 123 45 67', '+90 532 123 45 67']
-        },
-        email: {
-          title: 'E-Mail',
-          details: ['info@bezpro.com', 'satis@bezpro.com']
-        },
-        address: {
-          title: 'Adresse',
-          details: ['Merkez Mah. Tekstil Cad. No:123', 'Şişli / Istanbul / Türkei']
-        },
-        hours: {
-          title: 'Öffnungszeiten',
-          details: ['Montag – Freitag: 08:00 – 18:00', 'Samstag: 09:00 – 15:00']
-        }
-      },
-      mapTitle: 'Kartenstandort',
-      mapLocation: 'Şişli / Istanbul'
-    },
-    // Product Detail page
-    productDetail: {
-      backToProducts: 'Zurück zu den Produkten',
-      features: 'Eigenschaften',
-      specifications: 'Technische Spezifikationen',
-      advantages: 'Vorteile',
-      relatedProducts: 'Ähnliche Produkte',
-      relatedProductsSubtitle: 'Entdecken Sie weitere hochwertige Tuch-Produkte',
-      getQuote: 'Preisangebot einholen',
-      viewDetails: 'Details anzeigen →',
-      seeAll: 'Den gesamten Produktkatalog anzeigen',
-      benefits: {
         delivery: {
           title: 'Schnelle Lieferung',
-          description: 'Schnelle und sichere Lieferung in der gesamten Türkei'
-        },
-        quality: {
-          title: 'Qualitätsgarantie',
-          description: 'Qualitätsgarantie für all unsere Produkte'
-        },
-        support: {
-          title: 'Experten-Support',
-          description: 'Professionelle Unterstützung mit 15 Jahren Erfahrung'
+          description: 'Pünktliche und sichere Lieferung garantiert.'
         }
-      }
-    },
-    // Quote page
-    quote: {
-      title: 'Angebotsanfrage-Formular',
-      subtitle: 'Füllen Sie das Formular aus, um ein auf Ihre Bedürfnisse zugeschnittenes Angebot zu erhalten',
-      formButton: 'Angebotsformular',
-      description: 'Fordern Sie ein Angebot für maßgefertigte Tuch-Produkte über das Formular an.',
-      benefitsTitle: 'Vorteile der Angebotsanfrage',
-      back: 'Wir melden uns schnellstmöglich bei Ihnen.',
-      benefits: [
-        'Kostenlose Angebotserstellung',
-        'Antwort innerhalb von 24 Stunden',
-        'Individuelle Designoptionen',
-        'Großbestellungen',
-        'Qualitätsgarantie',
-        'Schnelle Lieferung'
-      ],
-      sended_form_title: 'Ihre Nachricht wurde erfolgreich gesendet!',
-      sending: 'Wird gesendet',
-      sended: 'Erfolgreich gesendet!',
-      form: {
-        phonePlaceholder: '+90 530 830 34 22',
-        countryPlaceholder: 'Türkei',
-        locationPlaceholder: 'Istanbul',
-        submit: 'Nachricht senden',
-        required: '*'
       },
-      quickContact: 'Schnellkontakt',
-      quickContactDescription: 'Für dringende Fälle können Sie uns direkt kontaktieren.',
-      openInNewTab: 'Formular in neuem Tab öffnen',
-      fillForm: 'Formular ausfüllen – wir setzen uns mit Ihnen in Verbindung',
-      loading: 'Lädt …'
-    },
-    // Features
-    features: {
-      quality: {
-        title: 'Qualitätsproduktion',
-        description: 'Wir arbeiten mit Rohstoffen höchster Qualität.'
+      // Common
+      common: {
+        productNotFound: 'Produkt nicht gefunden',
+        backToProducts: 'Zur Produktseite zurück',
+        breadcrumb: {
+          home: 'Startseite',
+          products: 'Unsere Produkte'
+        }
       },
-      design: {
-        title: 'Individuelles Design',
-        description: 'Design und Produktion nach Kundenanforderungen.'
-      },
-      delivery: {
-        title: 'Schnelle Lieferung',
-        description: 'Pünktliche und sichere Lieferung garantiert.'
+      // Footer
+      footer: {
+        description:
+          'Unser Unternehmen ist auf maßgeschneiderte Tuch- und technische Textilprodukte spezialisiert und bietet mit einem qualitätsorientierten Ansatz die besten Lösungen.',
+        productsTitle: 'Unsere Produkte',
+        contactTitle: 'Kontaktinformationen',
+        copyright: '© 2025 SoftNox. Alle Rechte vorbehalten.',
+        address1: 'Altınova Mah. Fuar Caddesi No:61 16090 Osmangazi / BURSA',
+        address2: 'Anadolu Mah. Karlıdağ Caddesi No:44/C 16270 Yıldırım / BURSA'
       }
-    },
-    // Common
-    common: {
-      productNotFound: 'Produkt nicht gefunden',
-      backToProducts: 'Zur Produktseite zurück',
-      breadcrumb: {
-        home: 'Startseite',
-        products: 'Unsere Produkte'
-      }
-    },
-    // Footer
-    footer: {
-      description:
-        'Unser Unternehmen ist auf maßgeschneiderte Tuch- und technische Textilprodukte spezialisiert und bietet mit einem qualitätsorientierten Ansatz die besten Lösungen.',
-      productsTitle: 'Unsere Produkte',
-      contactTitle: 'Kontaktinformationen',
-      copyright: '© 2025 SoftNox. Alle Rechte vorbehalten.',
-      address1: 'Altınova Mah. Fuar Caddesi No:61 16090 Osmangazi / BURSA',
-      address2: 'Anadolu Mah. Karlıdağ Caddesi No:44/C 16270 Yıldırım / BURSA'
     }
   }
-}
 
 };
 

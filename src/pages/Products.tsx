@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { Download } from 'lucide-react';
@@ -15,28 +14,32 @@ const Products = () => {
       name: 'products.ipaCloth.name',
       description: 'products.ipaCloth.description',
       image: '/photo/ipa_silme_bezi.jpeg',
-      price: 'products.priceContact' 
+      price: 'products.priceContact',
+      slug: 'ipa-silme-bezleri'
     },
     {
       id: 2,
       name: 'products.silkMesh.name',
       description: 'products.silkMesh.description',
       image: '/photo/ipek_elek_suzme_bezi.jpeg',
-      price: 'products.priceContact' 
+      price: 'products.priceContact',
+      slug: 'boya-suzme-bezleri'
     },
     {
       id: 3,
       name: 'products.microFiber.name',
       description: 'products.microFiber.description',
       image: '/photo/mikro-fiber_bez.jpeg',
-      price: 'products.priceContact' 
+      price: 'products.priceContact',
+      slug: 'mikrofiber-temizlik-bezleri'
     },
     {
       id: 4,
       name: 'products.bandocuGlove.name',
       description: 'products.bandocuGlove.description',
       image: '/photo/bandocu_eldiveni.jpeg',
-      price: 'products.priceContact' 
+      price: 'products.priceContact',
+      slug: 'bandocu-eldivenleri'
     }
   ];
 
@@ -69,7 +72,7 @@ const Products = () => {
               to="/iletisim"
               className="inline-block bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-3 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
             >
-              {t('products.contactUs')}   
+              {t('products.contactUs')}
             </Link>
 
             {/* İNDİRME BUTONU */}
@@ -79,7 +82,7 @@ const Products = () => {
               className="inline-flex items-center gap-2 bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-blue-50"
             // iOS Safari "download" yerine yeni sekmede açar; normaldir
             >
-              {t('products.dowloadPDF')}   
+              {t('products.dowloadPDF')}
               <Download className="h-5 w-5" />
             </a>
           </div>
@@ -132,41 +135,47 @@ const Products = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
             {products.map((product, index) => (
-              <div
+              <Link
                 key={product.id}
-                className={`bg-white rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-500 transform hover:scale-105 ${productsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                  } h-full flex flex-col`}
-                style={{ transitionDelay: `${index * 150}ms` }}
+                to={`/urunler/${product.slug}`} // path’te çeviri yok
+                className="block"
               >
-                {/* Görsel */}
-                <div className="relative h-64 overflow-hidden shrink-0">
-                  <img
-                    src={product.image}
-                    alt={t(product.name)}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
-                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex space-x-4" />
+                <div
+                  key={product.id}
+                  className={`bg-white rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-500 transform hover:scale-105 ${productsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                    } h-full flex flex-col`}
+                  style={{ transitionDelay: `${index * 150}ms` }}
+                >
+                  {/* Görsel */}
+                  <div className="relative h-64 overflow-hidden shrink-0">
+                    <img
+                      src={product.image}
+                      alt={t(product.name)}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex space-x-4" />
+                    </div>
+                  </div>
+
+                  {/* İçerik */}
+                  <div className="p-6 flex-1 flex flex-col">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{t(product.name)}</h3>
+                    <p className="text-gray-600 mb-4 text-sm leading-relaxed">{t(product.description)}</p>
+
+                    {/* CTA → En alta */}
+                    <div className="mt-auto border-t pt-4 flex items-center justify-between">
+                      <p className="text-sm text-gray-500">{t(product.price)}</p>
+                      <Link
+                        to={`/urunler/${t(product.slug)}`}
+                        className="bg-blue-900 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors duration-200"
+                      >
+                        {t('products.detail')}
+                      </Link>
+                    </div>
                   </div>
                 </div>
-
-                {/* İçerik */}
-                <div className="p-6 flex-1 flex flex-col">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{t(product.name)}</h3>
-                  <p className="text-gray-600 mb-4 text-sm leading-relaxed">{t(product.description)}</p>
-
-                  {/* CTA → En alta */}
-                  <div className="mt-auto border-t pt-4 flex items-center justify-between">
-                    <p className="text-sm text-gray-500">{t(product.price)}</p>
-                    <Link
-                      to={`/urun/${product.id}`}
-                      className="bg-blue-900 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors duration-200"
-                    >
-                      {t('products.detail')}
-                    </Link>
-                  </div>
-                </div>
-              </div>
+              </Link>
             ))}
           </div>
 
@@ -176,7 +185,7 @@ const Products = () => {
             <div className="bg-blue-900 text-white p-8 rounded-2xl">
               <h3 className="text-2xl font-bold mb-4">{t('products.specialProductionTitle')}  </h3>
               <p className="text-xl mb-6 opacity-90">
-                {t('products.ctaDescription')} 
+                {t('products.ctaDescription')}
               </p>
               <Link
                 to="/teklifal"

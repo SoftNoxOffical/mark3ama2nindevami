@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
@@ -25,7 +24,7 @@ declare global {
 
 
 function App() {
-   const { i18n } = useTranslation();
+
 
   useEffect(() => {
     // Google Translate Integration
@@ -72,7 +71,7 @@ function App() {
               <Route path="/" element={<Home />} />
             <Route path="/hakkimizda" element={<About />} />
             <Route path="/urunlerimiz" element={<Products />} />
-            <Route path="/urun/:id" element={<ProductDetail />} />
+            <Route path="/urunler/:slug" element={<ProductDetail />} />
             <Route path="/iletisim" element={<Contact />} />
             <Route path="/teklifal" element={<Quote />} />
           </Routes>

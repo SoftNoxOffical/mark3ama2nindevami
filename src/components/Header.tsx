@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Menu, X, ChevronDown } from 'lucide-react';
@@ -11,11 +11,11 @@ const Header = () => {
   const [isProductsDropdownOpen, setIsProductsDropdownOpen] = useState(false);
   type TimeoutId = ReturnType<typeof setTimeout>;
 
- const [dropdownTimeout, setDropdownTimeout] = useState<TimeoutId | null>(null);
+  const [dropdownTimeout, setDropdownTimeout] = useState<TimeoutId | null>(null);
   const [isMobileProductsOpen, setIsMobileProductsOpen] = useState(false);
   const location = useLocation();
   const { t } = useTranslation();
-   const handleMouseEnter = () => {
+  const handleMouseEnter = () => {
     if (dropdownTimeout) {
       clearTimeout(dropdownTimeout);
       setDropdownTimeout(null);
@@ -35,28 +35,32 @@ const Header = () => {
       name: 'products.ipaCloth.name',
       description: 'products.ipaCloth.description',
       image: '/photo/ipa_silme_bezi.jpeg',
-      price: 'products.priceContact'
+      price: 'products.priceContact',
+      slug: 'ipa-silme-bezleri'
     },
     {
       id: 2,
       name: 'products.silkMesh.name',
       description: 'products.silkMesh.description',
       image: '/photo/ipek_elek_suzme_bezi.jpeg',
-      price: 'products.priceContact'
+      price: 'products.priceContact',
+      slug: 'boya-suzme-bezleri'
     },
     {
       id: 3,
       name: 'products.microFiber.name',
       description: 'products.microFiber.description',
       image: '/photo/mikro-fiber_bez.jpeg',
-      price: 'products.priceContact'
+      price: 'products.priceContact',
+      slug: 'mikrofiber-temizlik-bezleri'
     },
     {
       id: 4,
       name: 'products.bandocuGlove.name',
       description: 'products.bandocuGlove.description',
       image: '/photo/bandocu_eldiveni.jpeg',
-      price: 'products.priceContact'
+      price: 'products.priceContact',
+      slug: 'bandocu-eldivenleri'
     }
   ];
   useEffect(() => {
@@ -67,7 +71,10 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
+useEffect(() => {
+  setIsProductsDropdownOpen(false);   // ürünler dropdown'unu kapat
+  // varsa mobil menü: setIsMenuOpen(false);
+}, [location.pathname]);
   const navItems = [
     { id: 0, name: t('nav.home'), path: '/' },
     { id: 1, name: t('nav.products'), path: '/urunlerimiz' },
@@ -103,8 +110,8 @@ const Header = () => {
                   key={item.path}
                   to={item.path}
                   className={`font-medium transition-all duration-300 hover:scale-105 text-sm xl:text-base ${location.pathname === item.path
-                      ? 'text-blue-600 border-b-2 border-blue-600'
-                      : 'text-gray-700 hover:text-blue-600'
+                    ? 'text-blue-600 border-b-2 border-blue-600'
+                    : 'text-gray-700 hover:text-blue-600'
                     }`}
                 >
                   {item.name}
@@ -119,9 +126,9 @@ const Header = () => {
                 >
                   <Link
                     to="/urunlerimiz"
-                    className={`font-medium transition-all duration-300 hover:scale-105 text-sm xl:text-base flex items-center space-x-1 ${location.pathname === '/urunlerimiz' || location.pathname.startsWith('/urun/')
-                        ? 'text-blue-600 border-b-2 border-blue-600'
-                        : 'text-gray-700 hover:text-blue-600'
+                    className={`font-medium transition-all duration-300 hover:scale-105 text-sm xl:text-base flex items-center space-x-1 ${location.pathname === '/urunlerimiz' || location.pathname.startsWith('/urunler/')
+                      ? 'text-blue-600 border-b-2 border-blue-600'
+                      : 'text-gray-700 hover:text-blue-600'
                       }`}
                   >
                     <span>{t('nav.products')}</span>
@@ -139,14 +146,15 @@ const Header = () => {
                         <h3 className="text-lg font-semibold text-gray-800 text-center">{t('home.productsTitle')}</h3>
                         <p className="text-sm text-gray-600 text-center mt-1"></p>
                       </div>
-                      
+
                       {/* Products grid */}
                       <div className="p-6">
                         <div className="grid grid-cols-2 gap-6">
                           {products.map((product) => (
                             <Link
                               key={product.id}
-                              to={`/urun/${product.id}`}
+                              to={`/urunler/${product.slug}`}
+                              onClick={() => window.dispatchEvent(new Event('CLOSE_GALLERY_MODAL'))}
                               className="group block bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-5 hover:from-blue-50 hover:to-indigo-50 transition-all duration-500 hover:shadow-lg hover:-translate-y-1 border border-gray-200 hover:border-blue-200"
                             >
                               <div className="aspect-[4/3] overflow-hidden rounded-xl mb-4 bg-white shadow-sm">
@@ -201,13 +209,13 @@ const Header = () => {
             >
               {t('nav.quote')}
             </Link>
-            <LanguageSelector />
+            <LanguageSelector onSelect={() => setIsMenuOpen(false)} />
           </nav>
 
-          
+
           {/* Mobile Menu Button */}
           <div className="lg:hidden flex items-center space-x-2 sm:space-x-4">
-            <LanguageSelector />
+            <LanguageSelector onSelect={() => setIsMenuOpen(false)} />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className={`transition-colors duration-300 ${isScrolled ? 'text-gray-900' : 'text-gray-900'}`}
@@ -220,7 +228,7 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="lg:hidden bg-white border-t border-gray-200 py-4 shadow-lg">
-            {navItems.map((item) => 
+            {navItems.map((item) =>
               item.id !== 1 ? (
                 <Link
                   key={item.path}
@@ -237,7 +245,7 @@ const Header = () => {
                 <div key="mobile-products">
                   <button
                     onClick={() => setIsMobileProductsOpen(!isMobileProductsOpen)}
-                    className={`w-full flex items-center justify-between px-4 py-2 font-medium transition-colors duration-200 ${location.pathname === '/urunlerimiz' || location.pathname.startsWith('/urun/')
+                    className={`w-full flex items-center justify-between px-4 py-2 font-medium transition-colors duration-200 ${location.pathname === '/urunlerimiz' || location.pathname.startsWith('/urunler/')
                       ? 'text-blue-600 bg-blue-50'
                       : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
                       }`}
@@ -247,7 +255,7 @@ const Header = () => {
                       className={`h-4 w-4 transition-transform duration-300 ${isMobileProductsOpen ? 'rotate-180' : ''}`}
                     />
                   </button>
-                  
+
                   {isMobileProductsOpen && (
                     <div className="bg-gray-50 border-t border-gray-200">
                       <div className="px-6 py-4">
@@ -256,7 +264,7 @@ const Header = () => {
                           {products.map((product) => (
                             <Link
                               key={product.id}
-                              to={`/urun/${product.id}`}
+                              to={`/urunler/${product.slug}`}
                               onClick={() => setIsMenuOpen(false)}
                               className="flex items-center space-x-3 p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-200 hover:bg-blue-50 transition-all duration-300"
                             >

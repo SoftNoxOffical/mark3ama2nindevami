@@ -1,14 +1,14 @@
-import React from 'react';
+
 import { useParams, Link } from 'react-router-dom';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
-import { ArrowLeft, CheckCircle, Truck, Shield, Award } from 'lucide-react';
+import { ArrowLeft} from 'lucide-react';
 import ImageGallery from '../components/ImageGallery';
 import { useTranslation } from 'react-i18next';
 
 const ProductDetail = () => {
-  const { id } = useParams();
+  const { slug } = useParams();
   const [heroRef, heroVisible] = useScrollAnimation();
-  const [detailsRef, detailsVisible] = useScrollAnimation();
+
   const [featuresRef, featuresVisible] = useScrollAnimation();
   const { t } = useTranslation();
 
@@ -22,9 +22,10 @@ const ProductDetail = () => {
         '/photo/İpa_silme_bez.jpeg',
         '/photo/ipa_silme_bezi.jpeg',
         '/photo/ipa_silme_bezi.jpeg'
-      ],  
+      ],
       specifications: t("products.ipaCloth,specifications", { returnObjects: true }) as string[],
-      price: 'products.priceContact' 
+      price: 'products.priceContact',
+      slug: 'ipa-silme-bezleri'
     },
     {
       id: 2,
@@ -37,7 +38,8 @@ const ProductDetail = () => {
         '/photo/ipek_elek_suzme_bezi.jpeg'
       ],
       specifications: t("products.ipaCloth,specifications", { returnObjects: true }) as string[],
-      price: 'products.priceContact' 
+      price: 'products.priceContact',
+      slug: 'boya-suzme-bezleri'
     },
     {
       id: 3,
@@ -50,7 +52,8 @@ const ProductDetail = () => {
         '/photo/mikro-fiber_bez.jpeg'
       ],
       specifications: t("products.ipaCloth,specifications", { returnObjects: true }) as string[],
-      price: 'products.priceContact' 
+      price: 'products.priceContact',
+      slug: 'mikrofiber-temizlik-bezleri'
     },
     {
       id: 4,
@@ -63,11 +66,12 @@ const ProductDetail = () => {
         '/photo/bandocu_eldiveni.jpeg'
       ],
       specifications: t("products.ipaCloth,specifications", { returnObjects: true }) as string[],
-      price: 'products.priceContact' 
+      price: 'products.priceContact',
+      slug: 'bandocu-eldivenleri'
     }
   ];
 
-  const product = products.find(p => p.id === parseInt(id || '1'));
+  const product = products.find(p => p.slug === (slug ));
 
   if (!product) {
     return (
@@ -81,7 +85,7 @@ const ProductDetail = () => {
       </div>
     );
   }
-{/* 
+  {/* 
   const benefits = [
     {
       icon: <Truck className="h-6 w-6" />,
@@ -101,7 +105,7 @@ const ProductDetail = () => {
   ];
 */}
   return (
-    <div className="pt-20">
+    <div className="pt-16 md:pt-20 lg:pt-20">
       {/* Breadcrumb */}
       <div className="bg-gray-50 py-4">
         <div className="container mx-auto px-4 lg:px-8">
@@ -116,14 +120,13 @@ const ProductDetail = () => {
       </div>
 
       {/* Product Hero */}
-      <section 
+      <section
         ref={heroRef}
-        className={`py-12 bg-white transition-all duration-1000 ${
-          heroVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'
-        }`}
+        className={`py-12 bg-white transition-all duration-1000 ${heroVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'
+          }`}
       >
         <div className="container mx-auto px-4 lg:px-8">
-          <Link 
+          <Link
             to="/urunlerimiz"
             className="inline-flex items-center space-x-2 text-blue-900 hover:text-blue-700 mb-8"
           >
@@ -146,9 +149,9 @@ const ProductDetail = () => {
                 </span>
               </div>*/}
               <h1 className="text-4xl font-bold text-gray-900 mb-4">{t(product.name)}</h1>
-              <p className="text-xl text-gray-600 mb-6 whitespace-pre-line whitespace-pre-wrap [tab-size:4]">{t(product.description)}</p>
-             {/*  <p className="text-gray-700 mb-8 leading-relaxed whitespace-pre-line whitespace-pre-wrap [tab-size:4]">{t(product.description)}</p> */}
-{/*
+              <p className="text-xl text-gray-600 mb-6 whitespace-pre-line whitespace-pre-wrap [tab-size:4]">{t(product.description)} selam </p>
+              {/*  <p className="text-gray-700 mb-8 leading-relaxed whitespace-pre-line whitespace-pre-wrap [tab-size:4]">{t(product.description)}</p> */}
+              {/*
               <div className="mb-8">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Özellikler</h3>
                 <div className="grid grid-cols-2 gap-3">
@@ -163,11 +166,11 @@ const ProductDetail = () => {
 */}
               <div className="bg-gray-50 p-6 rounded-xl mb-8">
                 <p className="text-2xl font-bold text-blue-900 mb-4">{t(product.price)}</p>
-                <Link 
+                <Link
                   to="/iletisim"
                   className="w-full bg-blue-900 hover:bg-blue-800 text-white py-3 px-6 rounded-lg font-semibold text-center block transition-colors duration-200"
                 >
-                  {t('productDetail.getQuote')} 
+                  {t('productDetail.getQuote')}
                 </Link>
               </div>
             </div>
@@ -175,7 +178,8 @@ const ProductDetail = () => {
         </div>
       </section>
 
-      {/* Product Details 
+      {/*
+       Product Details 
       <section 
         ref={detailsRef}
         className={`py-20 bg-gray-50 transition-all duration-1000 delay-200 ${
@@ -221,11 +225,10 @@ const ProductDetail = () => {
       </section>
 */}
       {/* Related Products */}
-      <section 
+      <section
         ref={featuresRef}
-        className={`py-20 bg-white transition-all duration-1000 delay-400 ${
-          featuresVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'
-        }`}
+        className={`py-20 bg-white transition-all duration-1000 delay-400 ${featuresVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'
+          }`}
       >
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
@@ -234,10 +237,10 @@ const ProductDetail = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {products.filter(p => p.id !== product.id).slice(0, 3).map((relatedProduct, index) => (
+            {products.filter(p => p.id !== product.id).slice(0, 3).map((relatedProduct) => (
               <Link
                 key={relatedProduct.id}
-                to={`/urun/${relatedProduct.id}`}
+                to={`/urunler/${(relatedProduct.slug)}`}
                 className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
                 <div className="h-48 overflow-hidden">
@@ -251,7 +254,7 @@ const ProductDetail = () => {
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{t(relatedProduct.name)} </h3>
                   <p className="text-gray-600 text-sm mb-4">{t(relatedProduct.description)}</p>
                   <span className="text-blue-900 font-semibold hover:text-yellow-500 transition-colors duration-200">
-                    {t('productDetail.viewDetails')} 
+                    {t('productDetail.viewDetails')}
                   </span>
                 </div>
               </Link>
